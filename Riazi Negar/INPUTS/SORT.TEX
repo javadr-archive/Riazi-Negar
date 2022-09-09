@@ -1,0 +1,25 @@
+% This file demonstrates how to execute DOS commands via \write99
+\def\DOS{\immediate\write99 }
+\DOS{} % so we can use it later in this file
+       % remember that the first \write99 must occur in one of
+       % the first few input lines of the first input file
+
+\input nul  % just for fun
+
+\begingroup \catcode`\&=12
+\immediate\openout1=unsorted
+\immediate\write1{&abc}
+\immediate\write1{&xyz}
+\immediate\write1{&def}
+\immediate\closeout1
+\endgroup
+
+\DOS{sort <unsorted.tex >sorted.tex}
+
+\halign{&\qquad#\hfil\cr
+  unsorted: \input unsorted \cr
+  sorted: \input sorted \cr
+  }
+
+\bye
+

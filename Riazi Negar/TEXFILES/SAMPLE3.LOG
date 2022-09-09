@@ -1,0 +1,48 @@
+** This is TeX--XeT  **, Version 3.141--1.1  (preloaded format=flplain 94.4.9)  3 FEB 1998 05:41
+**&flplain sample3.tex
+(sample3.tex
+LaTeX Ver. 2.09 <25/3/1992> Farsi Ver. 1.03 Copyright (C) Riazi-Negar 1993
+(C:\TEXXET\INPUTS\MxqaLXh.sty (C:\TEXXET\INPUTS\article.sty
+Standard Document Style `article' <14 Jan 92>.
+(C:\TEXXET\INPUTS\art11.sty)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+ (C:\TEXXET\INPUTS\twocolum.sty)))
+(C:\TEXXET\INPUTS\Tyqxixir.sty (C:\TEXXET\INPUTS\changes.sty
+\@eqnmar=\skip41
+)) (sample3.aux)
+[1
+
+
+] [2] [3]
+Underfull \hbox (badness 1418) in paragraph at lines 404--408
+[][]\elvit y-sis in Lin-ear Sys-tems: Con-trol-la-bil-[][]
+
+\hbox(7.60416+2.12917)x196.49544, glue set 2.42165
+.\beginR
+.\beginL
+.\elvit y
+.\discretionary
+..\elvit -
+.\elvit s
+.etc.
+
+[4] (sample3.aux) ) 
+Here is how much of TeX's memory you used:
+ 199 strings out of 1663
+ 1849 string characters out of 15471
+ 44085 words of memory out of 65535
+ 2456 multiletter control sequences out of 3000
+ 28851 words of font info for 88 fonts, out of 65534 for 200
+ 14 hyphenation exceptions out of 307
+ 14i,10n,17p,209b,427s stack positions out of 200i,40n,60p,4096b,1000s
+
+Output written on sample3.dvi (4 pages, 25528 bytes).
+There were 617 swappings between 136 real and 295 external pages for
+ 644847 acesses to 173 mem, 113 font, and 24 hyph pages

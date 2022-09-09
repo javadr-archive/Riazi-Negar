@@ -1,0 +1,57 @@
+** This is TeX--XeT  **, Version 3.141--1.1  (preloaded format=flplain 94.4.9)  3 FEB 1998 05:40
+**&flplain sample4.tex
+(sample4.tex
+LaTeX Ver. 2.09 <25/3/1992> Farsi Ver. 1.03 Copyright (C) Riazi-Negar 1993
+(C:\TEXXET\INPUTS\article.sty
+Standard Document Style `article' <14 Jan 92>.
+(C:\TEXXET\INPUTS\art12.sty)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+ (C:\TEXXET\INPUTS\twocolum.sty))
+No file sample4.aux.
+
+Underfull \hbox (badness 1067) in paragraph at lines 8--9
+[] [][]\twlnask Here we just include a few[]
+
+\hbox(7.368+5.412)x200.0, glue set 2.20268
+.\hbox(0.0+0.0)x12.0
+.\glue -12.0
+.\beginR
+.\hbox(0.0+0.0)x12.0
+.\twlnask H
+.etc.
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 20--24
+[]\twlnask you do not need to include any[]
+
+\hbox(7.368+5.412)x200.0, glue set 2.41899
+.\beginR
+.\twlnask y
+.\twlnask o
+.\kern-0.61967
+.\twlnask u
+.etc.
+
+[1
+
+
+] (sample4.aux) ) 
+Here is how much of TeX's memory you used:
+ 127 strings out of 1663
+ 1239 string characters out of 15471
+ 29908 words of memory out of 65535
+ 2392 multiletter control sequences out of 3000
+ 28277 words of font info for 87 fonts, out of 65534 for 200
+ 14 hyphenation exceptions out of 307
+ 13i,4n,17p,163b,101s stack positions out of 200i,40n,60p,4096b,1000s
+
+Output written on sample4.dvi (1 page, 1416 bytes).
+There were 178 swappings between 136 real and 178 external pages for
+ 61576 acesses to 117 mem, 111 font, and 24 hyph pages

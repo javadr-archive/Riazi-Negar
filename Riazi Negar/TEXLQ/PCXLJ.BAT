@@ -1,0 +1,2 @@
+@echo off
+dvidrv dvidot pcx @lj.cnf /fl=-1 %1 %2 %3 %4 %5 %6 %7 %8 %9

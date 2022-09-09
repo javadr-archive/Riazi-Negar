@@ -1,0 +1,10 @@
+% p6h.cnf (360x360 DPI using P6H fonts)
+/pd={,$DVIDRVINPUT:}@i
+/pl=$DVIDRVFONTS:p6h_{0,h,1,2,3,4,5,r,sli,7,8}
+/pf=$DVIDRVFONTS:pixel.p6h\@Rrdpi\@f{.pk,.pxl}
+/pg={,$DVIDRVGRAPH:}{@Rrdpi\,}@PBf{@Ef,.msp,.pcx,.bmp}
+/r=360
+/rf=360
+/fs=1
+/fm=lqhires
+/fd=2

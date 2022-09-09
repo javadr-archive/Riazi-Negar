@@ -1,0 +1,137 @@
+%
+% addfonts.sty
+% 
+% This file loads additional farsi fonts that can be used in
+% the Farsi-LaTeX package.
+%
+ 
+\def\newffont#1#2{\@ifdefinable #1{\font #1=#2
+\hyphenchar #1=-1\relax}}
+
+\def\@setfsize#1{\baselineskip #1 
+\baselineskip\baselinestretch\baselineskip
+   \normalbaselineskip\baselineskip}
+
+\def\FaRSXi{\protect\pfarsi}
+\def\ErBXi{\protect\parabi}
+\def\JdId{\protect\pjadid}
+\def\TrAFxiXk{\protect\ptrafic}
+
+\newffont {\tenfarsi}{nats10}
+\newffont {\elvnfarsi}{nats10 scaled 1095}
+\newffont {\twlvfarsi}{nats10 \@magscale1}
+\newffont {\frtnfarsi}{nats10 \@magscale2}
+\newffont {\svtnfarsi}{nats10 \@magscale3}
+\newffont {\twtyfarsi}{nats10 \@magscale4}
+\newffont {\twfvfarsi}{nats10 \@magscale5}
+
+\@addfontinfo \@vpt    {\def\pfarsi {\@prtct\nask}}
+\@addfontinfo \@vipt   {\def\pfarsi {\@prtct\nask}}
+\@addfontinfo \@viipt  {\def\pfarsi {\@prtct\nask}}
+\@addfontinfo \@viiipt {\def\pfarsi {\@prtct\nask}}
+\@addfontinfo \@ixpt   {\def\pfarsi {\@prtct\nask}}
+\@addfontinfo \@xpt    {\def\pfarsi {\tenfarsi}}
+\@addfontinfo \@xipt   {\def\pfarsi {\elvnfarsi}}
+\@addfontinfo \@xiipt  {\def\pfarsi {\twlvfarsi}}
+\@addfontinfo \@xivpt  {\def\pfarsi {\frtnfarsi}}
+\@addfontinfo \@xviipt {\def\pfarsi {\svtnfarsi}}
+\@addfontinfo \@xxpt   {\def\pfarsi {\twtyfarsi}}
+\@addfontinfo \@xxvpt  {\def\pfarsi {\twfvfarsi}}
+
+\newffont {\tenarabi}{naso10}
+\newffont {\elvnarabi}{naso10 scaled 1095}
+\newffont {\twlvarabi}{naso10 \@magscale1}
+\newffont {\frtnarabi}{naso10 \@magscale2}
+\newffont {\svtnarabi}{naso10 \@magscale3}
+\newffont {\twtyarabi}{naso10 \@magscale4}
+\newffont {\twfvarabi}{naso10 \@magscale5}
+
+\@addfontinfo \@vpt    {\def\parabi {\@prtct\nask}}
+\@addfontinfo \@vipt   {\def\parabi {\@prtct\nask}}
+\@addfontinfo \@viipt  {\def\parabi {\@prtct\nask}}
+\@addfontinfo \@viiipt {\def\parabi {\@prtct\nask}}
+\@addfontinfo \@ixpt   {\def\parabi {\@prtct\nask}}
+\@addfontinfo \@xpt    {\def\parabi {\tenarabi}}
+\@addfontinfo \@xipt   {\def\parabi {\elvnarabi}}
+\@addfontinfo \@xiipt  {\def\parabi {\twlvarabi}}
+\@addfontinfo \@xivpt  {\def\parabi {\frtnarabi}}
+\@addfontinfo \@xviipt {\def\parabi {\svtnarabi}}
+\@addfontinfo \@xxpt   {\def\parabi {\twtyarabi}}
+\@addfontinfo \@xxvpt  {\def\parabi {\twfvarabi}}
+
+\newffont {\tenjadid}{aljo10}
+\newffont {\elvnjadid}{aljo10 scaled 1095}
+\newffont {\twlvjadid}{aljo10 \@magscale1}
+\newffont {\frtnjadid}{aljo10 \@magscale2}
+\newffont {\svtnjadid}{aljo10 \@magscale3}
+\newffont {\twtyjadid}{aljo10 \@magscale4}
+\newffont {\twfvjadid}{aljo10 \@magscale5}
+
+\@addfontinfo \@vpt    {\def\pjadid {\@prtct\nask}}
+\@addfontinfo \@vipt   {\def\pjadid {\@prtct\nask}}
+\@addfontinfo \@viipt  {\def\pjadid {\@prtct\nask}}
+\@addfontinfo \@viiipt {\def\pjadid {\@prtct\nask}}
+\@addfontinfo \@ixpt   {\def\pjadid {\@prtct\nask}}
+\@addfontinfo \@xpt    {\def\pjadid {\tenjadid}}
+\@addfontinfo \@xipt   {\def\pjadid {\elvnjadid}}
+\@addfontinfo \@xiipt  {\def\pjadid {\twlvjadid}}
+\@addfontinfo \@xivpt  {\def\pjadid {\frtnjadid}}
+\@addfontinfo \@xviipt {\def\pjadid {\svtnjadid}}
+\@addfontinfo \@xxpt   {\def\pjadid {\twtyjadid}}
+\@addfontinfo \@xxvpt  {\def\pjadid {\twfvjadid}}
+
+\newffont {\tentrafic}{trfo10}
+\newffont {\elvntrafic}{trfo10 scaled 1095}
+\newffont {\twlvtrafic}{trfo10 \@magscale1}
+\newffont {\frtntrafic}{trfo10 \@magscale2}
+\newffont {\svtntrafic}{trfo10 \@magscale3}
+\newffont {\twtytrafic}{trfo10 \@magscale4}
+\newffont {\twfvtrafic}{trfo10 \@magscale5}
+
+\@addfontinfo \@vpt    {\def\ptrafic {\@prtct\nask}}
+\@addfontinfo \@vipt   {\def\ptrafic {\@prtct\nask}}
+\@addfontinfo \@viipt  {\def\ptrafic {\@prtct\nask}}
+\@addfontinfo \@viiipt {\def\ptrafic {\@prtct\nask}}
+\@addfontinfo \@ixpt   {\def\ptrafic {\@prtct\nask}}
+\@addfontinfo \@xpt    {\def\ptrafic {\tentrafic}}
+\@addfontinfo \@xipt   {\def\ptrafic {\elvntrafic}}
+\@addfontinfo \@xiipt  {\def\ptrafic {\twlvtrafic}}
+\@addfontinfo \@xivpt  {\def\ptrafic {\frtntrafic}}
+\@addfontinfo \@xviipt {\def\ptrafic {\svtntrafic}}
+\@addfontinfo \@xxpt   {\def\ptrafic {\twtytrafic}}
+\@addfontinfo \@xxvpt  {\def\ptrafic {\twfvtrafic}}
+
+\def\PxnXj{\@setfsize{6pt}\vpt\@vpt}
+\def\VXv{\@setfsize{7.2pt}\vipt\@vipt}
+\def\HxfXt{\@setfsize{8.5pt}\viipt\@viipt}
+\def\HxvXt{\@setfsize{9.6pt}\viiipt\@viiipt}
+\def\NXh{\@setfsize{10.8pt}\ixpt\@ixpt}
+\def\Dh{\@setfsize{12pt}\xpt\@xpt}
+\def\IaYZDh{\@setfsize{13.2pt}\xipt\@xipt}
+\def\DOAYZDh{\@setfsize{14.4pt}\xiipt\@xiipt}
+\def\YCxhaRDh{\@setfsize{16.8pt}\xivpt\@xivpt}
+\def\Hxfdh{\@setfsize{20.4pt}\xviipt\@xviipt}
+\def\BxixsXt{\@setfsize{25pt}\xxpt\@xxpt}
+\def\BxixsXtOPxnXj{\@setfsize{30pt}\xxvpt\@xxvpt}
+
+\newffont {\thirtyjadid}{aljo10 scaled 2986}
+\newffont {\trsixjadid}{aljo10 scaled 3583}
+\newffont {\frthreejadid}{aljo10 scaled 4300}
+
+\newffont {\thirtyfarsi}{nats10 scaled 2986}
+\newffont {\trsixfarsi}{nats10 scaled 3583}
+\newffont {\frthreefarsi}{nats10 scaled 4300}
+
+\newffont {\thirtytrafic}{trfo10 scaled 2986}
+\newffont {\trsixtrafic}{trfo10 scaled 3583}
+\newffont {\frthreetrafic}{trfo10 scaled 4300}
+
+\def\SXi{\@setfsize{36pt}\xxvpt\@xxvpt\def\pjadid{\thirtyjadid}%
+\def\pfarsi{\thirtyfarsi}\def\ptrafic{\thirtytrafic}}
+\def\SXiOVXv{\@setfsize{43pt}\xxvpt\@xxvpt\def\pjadid{\trsixjadid}%
+\def\pfarsi{\trsixfarsi}\def\ptrafic{\trsixtrafic}}
+\def\YCxhXlOSXh{\@setfsize{52pt}\xxvpt\@xxvpt\def\pjadid{\frthreejadid}%
+\def\pfarsi{\frthreefarsi}\def\ptrafic{\frthreetrafic}}
+
+\endinput
+

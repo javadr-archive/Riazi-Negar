@@ -1,0 +1,32 @@
+%
+%
+To install dvips, change your current working directory to the
+root directory of Farsi-LaTeX package.  The TEXROOT environment
+variable points to this root directory.  Then put dvips diskette
+in drive A: and type the following DOS command:
+
+XCOPY /S A:*.*
+
+You can also use the B: drive.
+
+For using dvips, you have to set the TEXCONFIG environment variable.
+To do this just add the following line:
+
+SET TEXCONFIG=%TEXROOT%\PS
+
+to the batch file SETTEXDF.BAT.  You can find this file in the root
+directory pointed by TEXROOT environment variable.
+
+You may also need to modify the CONFIG.PS FILE that is located in
+PS subdirectory of the root directory (the same directory that
+is pointed by the TEXCONFIG environment variable).  You have
+to modify this file if the name of your root directory is something
+other than C:\TEXXET; otherwise, you do not need to change anything.
+
+Note that if you are using a 32 bit machine, rename DVIPS32.EXE
+as DVIPS.EXE.  This will improve the performance of the program.
+Also, the ordinary DVIPS program (that works even on XT) is limited
+to 640K of DOS lower memory; hence, for processing complex files,
+you have to use the -a switch to conserve memory and make the program 
+running. The 32 bit version does not have this limitaion and will use 
+all available memory.

@@ -1,0 +1,173 @@
+%
+%  verbbeg.tex
+%
+\def\alef{{\elvnasb\char"41}}
+\def\beh{{\elvnasb\char"62}}
+\def\peh{{\elvnasb\char"70}}
+\def\teh{{\elvnasb\char"74}}
+\def\sseh{{\elvnasb\char"A0}}
+\def\gim{{\elvnasb\char"6A}}
+\def\cheh{{\elvnasb\char"A1}}
+\def\hheh{{\elvnasb\char"A2}}
+\def\kheh{{\elvnasb\char"77}}
+\def\dal{{\elvnasb\char"44}}
+\def\zal{{\elvnasb\char"5A}}
+\def\reh{{\elvnasb\char"52}}
+\def\zeh{{\elvnasb\char"91}}
+\def\jeh{{\elvnasb\char"83}}
+\def\siin{{\elvnasb\char"73}}
+\def\shin{{\elvnasb\char"76}}
+\def\sad{{\elvnasb\char"63}}
+\def\zad{{\elvnasb\char"A3}}
+\def\tah{{\elvnasb\char"75}}
+\def\zah{{\elvnasb\char"A4}}
+\def\ain{{\elvnasb\char"65}}
+\def\ghain{{\elvnasb\char"A5}}
+\def\feh{{\elvnasb\char"66}}
+\def\qaf{{\elvnasb\char"71}}
+\def\kaf{{\elvnasb\char"6B}}
+\def\gaf{{\elvnasb\char"67}}
+\def\lam{{\elvnasb\char"6C}}
+\def\mim{{\elvnasb\char"6D}}
+\def\nun{{\elvnasb\char"6E}}
+\def\vav{{\elvnasb\char"4F}}
+\def\heh{{\elvnasb\char"68}}
+\def\yeh{{\elvnasb\char"69}}
+\def\momayez{{\elvnasb\char"27}}
+\def\hamzeh{{\elvnasb\char"CE}}
+\def\digsep{{\elvnasb\char"26}}
+\def\asefr{{\elvnasb\char"D4}}
+\def\achahar{{\elvnasb\char"D5}}
+\def\apanj{{\elvnasb\char"D6}}
+\def\ashesh{{\elvnasb\char"D7}}
+\def\sefr{{\elvnasb\char"30}}
+\def\yek{{\elvnasb\char"31}}
+\def\dow{{\elvnasb\char"32}}
+\def\seh{{\elvnasb\char"33}}
+\def\chahar{{\elvnasb\char"34}} 
+\def\panj{{\elvnasb\char"35}} 
+\def\shesh{{\elvnasb\char"36}} 
+\def\haft{{\elvnasb\char"37}}
+\def\hasht{{\elvnasb\char"38}}
+\def\noh{{\elvnasb\char"39}}
+
+\font\halftone=halftone
+
+\def\reverseshade#1{\setbox0=\hbox{#1}%
+\setbox1=\hbox to \wd0{\cleaders\vbox to 3ex{\cleaders%
+\hbox{\halftone 6}\vfil}\hfil}\copy0\kern-\wd0\raise-1ex\box1}
+
+%
+\font\elvtt=cmtt10 \hyphenchar\elvtt=-1
+
+\hsize=14.3cm
+\hoffset=0.6cm
+\voffset=1cm
+
+\expandafter\ifx\csname useslantedfont\endcsname\relax 
+\font\elvnask=nadc10 \hyphenchar\elvnask=-1
+\else
+\font\elvnask=coms10 \hyphenchar\elvnask=-1
+\fi
+
+\font\elvnasb=comb10 \hyphenchar\elvnasb=-1
+
+\font\tenca=cmsy10 
+\baselineskip=13pt\relax
+
+% \def\verfilename{HELP.VER} % if verfilename is defined it is used
+\expandafter\ifx\csname verfilename\endcsname\relax
+   \def\farsititle{} \else \def\farsititle{Nam PrONdh : } \fi
+% \def\todaydate{72/1/20} % if date is defined it is used
+\expandafter\ifx\csname todaydate\endcsname\relax
+  \fi
+% \def\putpagenumber{}  % if putpagenumber is defined it is used
+\headline{\beginR\elvnask \farsititle{\beginL\elvtt \verfilename%
+\endL}\hfil \beginL \todaydate\endL\endR}
+\expandafter\ifx\csname putpagenumber\endcsname\relax %
+\footline={\hfil} \else \footline={\hss \elvnask \folio\hss} \fi
+
+
+
+\newcount\editorlno \editorlno=0
+% \def\putlinenumber{}  % if putlinenumber is defined it is used
+\expandafter\ifx\csname putlinenumber\endcsname\relax
+  \def\lnumber{} \else  \def\lnumber{\the\editorlno} \fi
+
+\everypar{}
+
+\catcode`\è=0  % character 232 is the new escape
+\catcode`\é=1  % character 233 is the new brace open
+\catcode`\ê=2  % character 234 is the new brace close
+\catcode`\ø=13 % character 248 is the active character for kesideh
+\catcode`\ù=13 % character 249 is the active character for modified open
+\catcode`\ú=13 % character 250 is the active character for modified close
+\catcode`\û=13 % character 251 is the active character for accent
+\letû=\1
+
+\defù{{\elvnask\char24}} % modified open
+\defú{{\elvnask\char25}} % modified close
+\defø{\lower2pt\hbox{\tenca\char0}} % keshideh
+%\defø{\char20} % keshideh
+
+
+\catcode`\^^A=13 % line_type_tex[0]
+\catcode`\^^B=13 % line_type_tex[1]
+\catcode`\^^C=13 % begin_reverse_tex[0] ^^E is end_reverse_tex[0]
+\catcode`\^^D=13 % begin_reverse_tex[1] ^^F is end_reverse_tex[1]
+\catcode`\^^G=13 % over_fill_tex
+\catcode`\^^H=13 % fill_tex (the hfill glue)
+\catcode`\^^M=13
+
+\let^^H=\hfill
+
+\def^^G{\rlap{\elvnask\char127}}  % over_fill marker
+\def^^A#1^^M{\advance\editorlno by 1%
+\noindent\beginL\elvtt\llap{\lnumber\kern1pt$\rightarrow$\kern1pt}#1\par}
+\def^^B#1^^M{\advance\editorlno by 1%
+\noindent\beginR\elvnask\llap{\beginL\lnumber\endL\kern1pt$\leftarrow$\kern1pt}#1\par}
+\def^^C#1^^E{\reverseshade{\beginR\elvnask #1\endR}}
+\def^^D#1^^F{\reverseshade{\beginL\elvtt #1\endL}}
+
+\catcode`\<=13  % farsi font does not have <
+\catcode`\>=13  % farsi font does not have >
+
+\def<{{\elvtt\char60}}
+\def>{{\elvtt\char62}}
+
+\catcode`\ð=13  % character 240 is farsi backslash
+\catcode`\ñ=13  % character 241 is farsi tilde
+\catcode`\ò=13  % character 242 is farsi |
+\catcode`\ó=13  % character 243 is farsi brace left
+\catcode`\ô=13  % character 244 is farsi brace right
+
+\begingroup
+\catcode``=13
+\gdef\nolig{\let`\ordlquote}
+\endgroup
+
+\def\ordlquote{\leavevmode{\kern0pt}`}
+
+\def\changeback{\catcode`\\=12}
+
+\defð{{\tenca\char110}}
+\defñ{{\elvnask\char126}}
+\defò{{\tenca\char106}}
+\defó{{\tenca\char102}}
+\defô{{\tenca\char103}}
+
+\catcode`\{=13
+\catcode`\}=13
+\def{éé\elvtt\char123êê
+\def}éé\elvtt\char125êê
+\catcode`\ =13
+\def éé\tt\ êê
+\catcode`\~=12
+\catcode`\$=12
+\catcode`\&=12
+\catcode`\_=12
+\catcode`\^=12
+\catcode`\#=12
+\catcode`\%=12
+\catcode``=13 \nolig
+\changeback 

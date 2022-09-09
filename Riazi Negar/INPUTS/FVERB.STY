@@ -1,0 +1,91 @@
+\makeatletter
+%       ****************************************
+%       *              VERBATIM                *
+%       ****************************************
+%
+%  The verbatim environment uses the fixed-width \tt font, turns blanks into
+%  spaces, starts a new line for each carrige return (or sequence of
+%  consecutive carriage returns), and interprets EVERY character literally.
+%  I.e., all special characters \, {, $, etc. are \catcode'd to 'other'.
+%
+%  The command \verb produces in-line verbatim text, where the argument
+%  is delimited by any pair of characters.  E.g., \verb #...# takes
+%  '...' as its argument, and sets it verbatim in \tt font.
+%
+%  The *-variants of these commands is the same, except that spaces
+%  print as the TeXbook's space character instead of as blank spaces.
+ 
+%{\catcode`\^^M=13 \gdef\@gobblecr{\@ifnextchar
+%{\@gobble}{\ignorespaces}}}
+ 
+%{\catcode`\ =\active\gdef\@vobeyspaces{\catcode`\ \active\let \@xobeysp}}
+ 
+% Definition of \@xobeysp chaned on 19 Nov 86 from
+% \def\@xobeysp{\leavevmode{} }
+% to prevent line breaks at spaces.  Change suggested by
+% Nelson Beebe
+%
+%\def\@xobeysp{\leavevmode\penalty10000\ }
+ 
+ 
+ 
+%\begingroup \catcode `|=0 \catcode `[= 1
+%\catcode`]=2 \catcode `\{=12 \catcode `\}=12
+%\catcode`\\=12 |gdef|@xverbatim#1\end{verbatim}[#1|end[verbatim]]
+%|gdef|@sxverbatim#1\end{verbatim*}[#1|end[verbatim*]]
+%|endgroup
+ 
+% \@sverbatim obsolete -- removed 24 May 89, as suggested by
+% Rainer Sch\"opf and Frank Mittelbach
+% \def\@sverbatim{\obeyspaces\@verbatim}
+ 
+\def\@gobble#1{}
+ 
+% 91/07/24 RmS: added \penalty\interlinepenalty to definition
+%               of \par so that \samepage works.
+
+\def\@verbatim{\trivlist \item[]\if@minipage\else\vskip\parskip\fi
+\leftskip\@totalleftmargin\rightskip\z@ \beginL\everypar{}
+\parindent\z@\parfillskip\@flushglue\parskip\z@
+%%RmS 91/08/26 Added \@@par to clear possible \parshape definition
+%%from a surrounding list (the verbatim guru says)
+\@@par
+\@tempswafalse \def\par{\if@tempswa\hbox{}\fi\@tempswatrue\@@par
+\penalty\interlinepenalty}%
+\obeylines \tt \catcode``=13 \catcode`|=0 \@noligs \let\do\@makeother \dospecials}
+ 
+\def\verbatim{\@verbatim \frenchspacing\@vobeyspaces \@xverbatim}
+\let\endverbatim=\endtrivlist
+ 
+\@namedef{verbatim*}{\@verbatim\@sxverbatim}
+\expandafter\let\csname endverbatim*\endcsname =\endtrivlist
+ 
+ 
+\def\@makeother#1{\catcode`#1=12\relax}
+ 
+\def\verb{\begingroup \catcode``=13 \@noligs
+\tt \let\do\@makeother \dospecials
+\@ifstar{\@sverb}{\@verb}}
+ 
+% Definitions of \@sverb and \@verb changed so \verb+ foo+  does not lose
+% leading blanks when it comes at the beginning of a line.
+% Change made 24 May 89. Suggested by Frank Mittelbach and Rainer Sch\"opf.
+%
+\def\@sverb#1{\def\@tempa ##1#1{\leavevmode\null##1\endgroup}\@tempa}
+ 
+\def\@verb{\@vobeyspaces \frenchspacing \@sverb}
+ 
+ 
+%% \@noligs prevents ?` and !` from being treated as ligatures
+%% added 19 April 86
+
+\begingroup
+\catcode``=13
+\gdef\@noligs{\let`\@lquote}
+\endgroup
+ 
+%% RmS 91/06/21: added \leavevmode to definition of \@lquote
+%%  to avoid the \kern being processed in vertical mode
+ 
+\def\@lquote{\leavevmode{\kern\z@}`}
+\makeatother

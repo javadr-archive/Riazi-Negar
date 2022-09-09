@@ -1,0 +1,8 @@
+4TOTEX %1
+4elatexl %1
+DEL %1.TEX
+DEL %1.FED
+DEL %1.AUX
+DEL %1.LOG
+DEL %1.DVI
+

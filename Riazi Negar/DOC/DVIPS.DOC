@@ -1,0 +1,396 @@
+
+
+
+   13 February 1992                                                  DVIPS(1)
+
+
+
+   NAME
+     dvips - convert a TeX DVI file to PostScript
+
+   SYNOPSIS
+     dvips [ _o_p_t_i_o_n_s ] _f_i_l_e[.dvi]
+
+   DESCRIPTION
+     The program dvips takes a DVI file _f_i_l_e[.dvi] produced by TeX (or by
+     some other processor such as GFtoDVI) and converts it to PostScript,
+     normally sending the result directly to the laserprinter.  The DVI file
+     may be specified without the ._d_v_i extension.  Fonts used may either be
+     resident in the printer or defined as bitmaps in PK files, or a `vir-
+     tual' combination of both.  If the MakeTeXPK program is installed, dvips
+     will automatically invoke METAFONT to generate fonts that don't already
+     exist.
+
+     For more information, see the manual _d_v_i_p_s._t_e_x in the TEXINPUTS direc-
+     tory. The manual can be printed with the following commands:
+
+
+          tex dvips
+          dvips dvips -o dvips.ps
+          lpr dvips.ps
+
+   OPTIONS
+
+     -a   Conserve memory by making three passes over the .dvi file instead
+          of two and only loading those characters actually used.  Generally
+          only useful on machines with a very limited amount of memory, like
+          some PCs.
+
+     -A   Print only odd pages (TeX pages, not sequence pages).
+
+     -b num
+          Generate _n_u_m copies of each page, but duplicating the page body
+          rather than using the #_n_u_m_c_o_p_i_e_s option.  This can be useful in
+          conjunction with a header file setting _c_h_a_r_9_2_b_o_p-_h_o_o_k to do color
+          separations or other neat tricks.
+
+     -B   Print only even pages (TeX pages, not sequence pages).
+
+     -c num
+          Generate _n_u_m copies of every page.  Default is 1.  (For collated
+          copies, see the -_C option below.)
+
+     -C num
+          Create _n_u_m copies, but collated (by replicating the data in the
+          PostScript file).  Slower than the -_c option, but easier on the
+          hands, and faster than resubmitting the same PostScript file multi-
+          ple times.
+
+     -d num
+          Set the debug flags.  This is intended only for emergencies or for
+
+
+   TeXware                                                                  1
+
+
+
+
+
+
+   DVIPS(1)                                                  13 February 1992
+
+
+          unusual fact-finding expeditions; it will work only if _d_v_i_p_s has
+          been compiled with the DEBUG option.  For more information on pos-
+          sible values see section 15 of _d_v_i_p_s._t_e_x.
+
+     -D num
+          Set the resolution in dpi (dots per inch) to _n_u_m. This affects the
+          choice of bitmap fonts that are loaded and also the positioning of
+          letters in resident PostScript fonts. Must be between 10 and 10000.
+          This affects both the horizontal and vertical resolution.  If a
+          high resolution (something greater than 400 dpi, say) is selected,
+          the -_Z flag should probably also be used.
+
+     -e num
+          Make sure that each character is placed at most this many pixels
+          from its `true' resolution-independent position on the page. The
+          default value of this parameter is resolution dependent.  Allowing
+          individual characters to `drift' from their correctly rounded posi-
+          tions by a few pixels, while regaining the true position at the
+          beginning of each new word, improves the spacing of letters in
+          words.
+
+     -E   makes _d_v_i_p_s attempt to generate an EPSF file with a tight bounding
+          box.  This only works on one-page files, and it only looks at marks
+          made by characters and rules, not by any included graphics.  In
+          addition, it gets the glyph metrics from the _t_f_m file, so charac-
+          ters that lie outside their enclosing _t_f_m box may confuse it.  In
+          addition, the bounding box might be a bit too loose if the charac-
+          ter glyph has significant left or right side bearings.  Nonethe-
+          less, this option works well for creating small EPSF files for
+          equations or tables or the like.  (Note, of course, that _d_v_i_p_s out-
+          put is resolution dependent and thus does not make very good EPSF
+          files, especially if the images are to be scaled; use these EPSF
+          files with a great deal of care.)
+
+     -f   Read the ._d_v_i file from standard input and write the PostScript to
+          standard output.  The standard input must be seekable, so it cannot
+          be a pipe.  If you must use a pipe, write a shell script that
+          copies the pipe output to a temporary file and then points _d_v_i_p_s at
+          this file.  This option also disables the automatic reading of the
+          _P_R_I_N_T_E_R environment variable, and turns off the automatic sending
+          of control D if it was turned on with the -_F option or in the con-
+          figuration file; use -_F after this option if you want both.
+
+     -F   Causes Control-D (ASCII code 4) to be appended as the very last
+          character of the PostScript file.  This is useful when _d_v_i_p_s is
+          driving the printer directly instead of working through a spooler,
+          as is common on extremely small systems.  NOTE! DO NOT USE THIS
+          OPTION!
+
+     -h name
+          Prepend file _n_a_m_e as an additional header file. (However, if the
+          name is simply `-' suppress all header files from the output.)
+          This header file gets added to the PostScript _u_s_e_r_d_i_c_t.
+
+
+
+   2                                                                  TeXware
+
+
+
+
+
+
+   13 February 1992                                                  DVIPS(1)
+
+
+     -i   Make each section be a separate file.  Under certain circumstances,
+          _d_v_i_p_s will split the document up into `sections' to be processed
+          independently; this is most often done for memory reasons.  Using
+          this option tells _d_v_i_p_s to place each section into a separate file;
+          the new file names are created replacing the suffix of the supplied
+          output file name by a three-digit sequence number.  This option is
+          most often used in conjunction with the -_S option which sets the
+          maximum section length in pages.  For instance, some photo-
+          typesetters cannot print more than ten or so consecutive pages
+          before running out of steam; these options can be used to automati-
+          cally split a book into ten-page sections, each to its own file.
+
+     -k   Print crop marks.  This option increases the paper size (which
+          should be specified, either with a paper size special or with the
+          -_T option) by a half inch in each dimension.  It translates each
+          page by a quarter inch and draws cross-style crop marks.  It is
+          mostly useful with typesetters that can set the page size automati-
+          cally.
+
+     -K   This option causes comments in included PostScript graphics, font
+          files, and headers to be removed.  This is sometimes necessary to
+          get around bugs in spoolers or PostScript post-processing programs.
+          Specifically, the %%Page comments,  when left in, often cause dif-
+          ficulties.  Use of this flag can cause some included graphics to
+          fail, since the PostScript header macros from some software pack-
+          ages read portions of the input stream line by line, searching for
+          a particular comment.  This option has been turned off by default
+          because PostScript previewers and spoolers have been getting
+          better.
+
+     -l num
+          The last page printed will be the first one numbered _n_u_m Default is
+          the last page in the document.  If the _n_u_m is prefixed by an equals
+          sign, then it (and any argument to the -_p option) is treated as a
+          sequence number, rather than a value to compare with _c_h_a_r_9_2 _c_o_u_n_t_0
+          values.  Thus, using -_l =_9 will end with the ninth page of the
+          document, no matter what the pages are actually numbered.
+
+     -m   Specify manual feed for printer.
+
+     -M   Turns off the automatic font generation facility.  If any fonts are
+          missing, commands to generate the fonts are appended to the file
+          _m_i_s_s_f_o_n_t._l_o_g in the current directory; this file can then be exe-
+          cuted and deleted to create the missing fonts.
+
+     -n num
+          At most _n_u_m pages will be printed. Default is 100000.
+
+     -N   Turns off structured comments; this might be necessary on some sys-
+          tems that try to interpret PostScript comments in weird ways, or on
+          some PostScript printers.  Old versions of TranScript in particular
+          cannot handle modern Encapsulated PostScript.
+
+     -o name
+
+
+   TeXware                                                                  3
+
+
+
+
+
+
+   DVIPS(1)                                                  13 February 1992
+
+
+          The output will be sent to file _n_a_m_e If no file name is given, the
+          default name is _f_i_l_e._p_s where the .dvi file was called _f_i_l_e._d_v_i; if
+          this option isn't given, any default in the configuration file is
+          used.  If the first character of the supplied output file name is
+          an exclamation mark, then the remainder will be used as an argument
+          to _p_o_p_e_n; thus, specifying !_l_p_r as the output file will automati-
+          cally queue the file for printing.  This option also disables the
+          automatic reading of the _P_R_I_N_T_E_R environment variable, and turns
+          off the automatic sending of control D if it was turned on with the
+          -_F option or in the configuration file; use -_F after this option if
+          you want both.
+
+     -O offset
+          Move the origin by a certain amount.  The _o_f_f_s_e_t is a comma-
+          separated pair of dimensions, such as ._1_i_n,-._3_c_m (in the same syn-
+          tax used in the _p_a_p_e_r_s_i_z_e special).  The origin of the page is
+          shifted from the default position (of one inch down, one inch to
+          the right from the upper left corner of the paper) by this amount.
+
+     -p num
+          The first page printed will be the first one numbered _n_u_m. Default
+          is the first page in the document.  If the _n_u_m is prefixed by an
+          equals sign, then it (and any argument to the -_l option) is treated
+          as a sequence number, rather than a value to compare with _c_h_a_r_9_2
+          _c_o_u_n_t_0 values.  Thus, using -_p =_3 will start with the third page of
+          the document, no matter what the pages are actually numbered.
+
+     -pp pagelist
+          A comma-separated list of pages and ranges (a-b) may be given,
+          which will be interpreted as _c_h_a_r_9_2 _c_o_u_n_t_0 values.  Pages not
+          specified will not be printed.  Multiple -pp options may be speci-
+          fied or all pages and page ranges can be specified with one -pp
+          option.
+
+     -P printername
+          Sets up the output for the appropriate printer.  This is imple-
+          mented by reading in _c_o_n_f_i_g._p_r_i_n_t_e_r_n_a_m_e , which can then set the
+          output pipe (as in, !_l_p_r -_P_p_r_i_n_t_e_r_n_a_m_e as well as the font paths
+          and any other _c_o_n_f_i_g._p_s defaults for that printer only.  Note that
+          _c_o_n_f_i_g._p_s is read before _c_o_n_f_i_g._p_r_i_n_t_e_r_n_a_m_e In addition, another
+          file called ~/._d_v_i_p_s_r_c is searched for immediately after _c_o_n_f_i_g._p_s;
+          this file is intended for user defaults.  If no -_P command is
+          given, the environment variable _P_R_I_N_T_E_R is checked.  If that vari-
+          able exists, and a corresponding configuration file exists, that
+          configuration file is read in.
+
+     -q   Run in quiet mode.  Don't chatter about pages converted, etc.;
+          report nothing but errors to standard error.
+
+     -r   Stack pages in reverse order.  Normally, page 1 will be printed
+          first.
+
+     -s   Causes the entire global output to be enclosed in a save/restore
+          pair.  This causes the file to not be truly conformant, and is thus
+
+
+   4                                                                  TeXware
+
+
+
+
+
+
+   13 February 1992                                                  DVIPS(1)
+
+
+          not recommended, but is useful if you are driving the printer
+          directly and don't care too much about the portability of the out-
+          put.
+
+     -S num
+          Set the maximum number of pages in each `section'.  This option is
+          most commonly used with the -_i option; see that documentation above
+          for more information.
+
+     -t papertype
+          This sets the paper type to _p_a_p_e_r_t_y_p_e. The _p_a_p_e_r_t_y_p_e _s_h_o_u_l_d _b_e
+          _d_e_f_i_n_e_d _i_n _o_n_e the appropriate code to select it.  (Currently known
+          types include _l_e_t_t_e_r, _l_e_g_a_l, _l_e_d_g_e_r, _a_4, _a_3, ) You can also specify
+          -_t _l_a_n_d_s_c_a_p_e, which rotates a document by 90 degrees.  To rotate a
+          document whose size is not letter, you can use the -_t option twice,
+          once for the page size, and once for landscape.  The upper left
+          corner of each page in the ._d_v_i file is placed one inch from the
+          left and one inch from the top.  Use of this option is highly
+          dependent on the configuration file.  Note that executing the
+          _l_e_t_t_e_r or _a_4 or other PostScript operators cause the document to be
+          nonconforming and can cause it not to print on certain printers, so
+          the paper size should not execute such an operator if at all possi-
+          ble.
+
+     -T offset
+          Set the paper size to the given pair of dimensions.  This option
+          takes its arguments in the same style as -_O. It overrides any paper
+          size special in the dvi file.
+
+     -U   Disable a PostScript virtual memory saving optimization that stores
+          the character metric information in the same string that is used to
+          store the bitmap information.  This is only necessary when driving
+          the Xerox 4045 PostScript interpreter.  It is caused by a bug in
+          that interpreter that results in `garbage' on the bottom of each
+          character.  Not recommended unless you must drive this printer.
+
+     -x num
+          Set the magnification ratio to _n_u_m /1000. Overrides the magnifica-
+          tion specified in the .dvi file.  Must be between 10 and 100000.
+
+     -X num
+          Set the horizontal resolution in dots per inch to _n_u_m.
+
+     -Y num
+          Set the vertical resolution in dots per inch to _n_u_m.
+
+     -Z   Causes bitmapped fonts to be compressed before they are downloaded,
+          thereby reducing the size of the PostScript font-downloading infor-
+          mation.  Especially useful at high resolutions or when very large
+          fonts are used.  Will slow down printing somewhat, especially on
+          early 68000-based PostScript printers.
+
+
+
+
+
+   TeXware                                                                  5
+
+
+
+
+
+
+   DVIPS(1)                                                  13 February 1992
+
+
+   SEE ALSO
+     mf(1), afm2tfm(1), tex(1), latex(1), lpr(1), _d_v_i_p_s._t_e_x.
+
+   DIAGNOSTICS
+
+   NOTES
+     PostScript is a registered trademark of Adobe Systems Incorporated.
+
+   AUTHOR
+     Tomas Rokicki <rokicki@cs.stanford.edu>; extended to virtual fonts by
+     Don Knuth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   6                                                                  TeXware
+
+
+99

@@ -1,0 +1,15 @@
+\newbox\figfbox
+\newdimen\figfw
+\font\figfa=figfa at 72.27truept
+\setbox\figfbox=\vbox{\hbox{%
+\figfa\char0\char1\char2}}
+\figfw=\wd\figfbox
+\setbox\figfbox=\hbox{\vbox{\hsize=\figfw
+\parskip=0pt\offinterlineskip\parindent0pt
+\hbox{\figfa\char0\char1\char2}
+\hbox{\figfa\char3\char4\char5}}}
+\ifx\parbox\undefined
+    \def\setfigf{\box\figfbox}
+\else
+    \def\setfigf{\parbox{\wd\figfbox}{\box\figfbox}}
+\fi

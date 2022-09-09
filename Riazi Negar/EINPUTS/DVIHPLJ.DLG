@@ -1,0 +1,123 @@
+% dvihplj 1.4s  04-Nov-1993  03:33
+%
+% Input file: dvips.dvi
+% Output file: PRN
+%
+/b:25
+/d:-
+/e:30
+/k:0
+/n:65535
+/nf:1
+/np:1
+/z-
+/cf:1
+/cp:1
+/cs:1
+/fi
+/fl:300
+/fm:hplaser
+/fo-
+/fs:1
+/fd:2
+/ft:0.2
+/fu-
+/fz::0,:h,:1,:2,:3,:4,:5,:6,:7,:8,:9
+/l:1in
+/la:4.5mm
+/t:1in
+/ta:0mm
+/h:296mm
+/w:210mm
+/tr:0
+/r:300
+/rf:300
+/rg:0
+/pd:{,$DVIDRVINPUT:}@i
+/pf:$DVIDRVFONTS:pixel.lj\@Rrdpi\@f{.pk,.pxl}
+/pg:{,$DVIDRVGRAPH:}{@Rrdpi\,}@PBf{@Ef,.msp,.pcx,.bmp}
+/pi:
+/pj:\dv1.mfj
+/pl:$DVIDRVFONTS:lj_{0,h,1,2,3,4,5a,5b,sli,7}
+/pm:{$TEXTFM:,\emtex\tfm\}@f
+/po:prn
+/pr:{,$PATH:}@f
+/ps:
+/pt:@d.dlg
+/pv:
+/pw:
+/v:2
+/u:in
+/xe+
+/xx+
+/oa-
+/ob-
+/oc:0
+/oe+
+/of:0
+/og:300
+/oi+
+/oj-
+/ol
+/om:394
+/oo+
+/or:0
+/os:0
+/ov+
+/ow:16
+/ox-
+/oz+
++initial-formfeed:off
++final-formfeed:on
+/ci:1 /cx:0in /cy:0in
+/ci:1
+@
+
+' TeX output 1993.11.04:0331'
+Loading font cminch scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cminch])
+Loading font cmbx10 scaled 1440  (D:\TEXXET\FONTS\lj_2.fli [cmbx10])
+Loading font logo10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [logo10])
+Loading font cmbx10 scaled 1440  (D:\TEXXET\FONTS\lj_2.fli [cmbx10])
+Loading font cmbx10 scaled 1727  (D:\TEXXET\FONTS\lj_3.fli [cmbx10])
+Loading font cmbx10 scaled 2488  (D:\TEXXET\FONTS\lj_5a.fli [cmbx10])
+Loading font cmti10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmti10])
+Loading font cmsl10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmsl10])
+Loading font cmtt10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmtt10])
+Loading font cmbx10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmbx10])
+Loading font cmsy7 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmsy7])
+Loading font cmsy10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmsy10])
+Loading font cmmi10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmmi10])
+Loading font cmr8 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmr8])
+Loading font cmr10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmr10])
+Loading page pointers... 50 input pages, 6 output pages.
+ [25] [26] <17600+8166,1,1> [27] <20032+11420,1,1> [28] <22016+11005,1,1>
+ [29] <22400+11092,1,1> [30] <23104+8650,1,1> <28992+10453,2,2>
+Characters downloaded to printer:  200
+Characters printed using graphics: 108
+
+Memory usage:
+Strings                          66       1024
+Page buffers                      3      30720
+Sorted page buffers               1      10240
+Sorted page index              3496      27968
+Position stack                    6        168
+Font table                       15       1260
+Font indices                     15        150
+Page list                        50         12
+Characters                     1152      36864
+Raster data                      93       9490
+Virtual fonts                     0          0
+VF characters                     0          0
+VF macros                         0          0
+Graphics                          0          0
+Lines                             0          0
+Font library directories          0          0
+Band buffer                     158      48980
+TOTAL                                   166876
+
+Number of deallocations:   1538
+Temporary file size:          0
+EMS bytes used:               0
+XMS bytes used:            7680
+External memory reads:       33
+External memory writes:      11

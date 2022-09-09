@@ -1,0 +1,12 @@
+% lj.cnf (300x300 DPI using LJ fonts)
+/pd={,$DVIDRVINPUT:}@i
+/pl=$DVIDRVFONTS:lj_{0,h,1,2,3,4,5a,5b,sli,7,8}
+/pf=$DVIDRVFONTS:pixel.lj\@Rrdpi\@f{.pk,.pxl}
+/pg={,$DVIDRVGRAPH:}{@Rrdpi\,}@PBf{@Ef,.msp,.pcx,.bmp}
+/r=300
+/rf=300
+/fs=1
+/fm=hplaser
+/fd=2
+/h=297mm
+/w=210mm

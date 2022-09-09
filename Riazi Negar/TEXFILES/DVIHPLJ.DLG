@@ -1,0 +1,108 @@
+% dvihplj 1.4s  20-Oct-1994  07:57
+%
+% Input file: TIR.dvi
+% Output file: PRN
+%
+/b:*
+/d:-
+/e:*
+/k:0
+/n:65535
+/nf:1
+/np:1
+/z-
+/cf:1
+/cp:1
+/cs:1
+/fi
+/fl:300
+/fm:hplaser
+/fo-
+/fs:1
+/fd:2
+/ft:0.2
+/fu-
+/fz::0,:h,:1,:2,:3,:4,:5,:6,:7,:8,:9
+/l:1in
+/la:4.5mm
+/t:1in
+/ta:0mm
+/h:297mm
+/w:210mm
+/tr:0
+/r:300
+/rf:300
+/rg:0
+/pd:{,$DVIDRVINPUT:}@i
+/pf:$DVIDRVFONTS:pixel.lj\@Rrdpi\@f{.pk,.pxl}
+/pg:{,$DVIDRVGRAPH:}{@Rrdpi\,}@PBf{@Ef,.msp,.pcx,.bmp}
+/pi:
+/pj:C:\TEXXET\dv2.mfj
+/pl:$DVIDRVFONTS:lj_{0,h,1,2,3,4,5a,5b,sli,7,8}
+/pm:{$TEXTFM:,\emtex\tfm\}@f
+/po:prn
+/pr:{,$PATH:}@f
+/ps:
+/pt:@d.dlg
+/pv:
+/pw:
+/v:2
+/u:in
+/xe+
+/xx+
+/oa-
+/ob-
+/oc:0
+/oe+
+/of:0
+/og:300
+/oi+
+/oj-
+/ol
+/om:394
+/oo+
+/or:0
+/os:0
+/ov+
+/ow:16
+/ox-
+/oz+
++initial-formfeed:off
++final-formfeed:on
+/ci:1 /cx:0in /cy:0in
+/ci:1
+@
+
+' TeX output 1994.10.20:0757'
+Loading font como10 scaled 1200  (C:\TEXXET\FONTS\lj_7.fli [como10])
+Loading page pointers... 1 input page, 1 output page.
+ [1] <9408+3171,1,1>
+Characters downloaded to printer:  67
+Characters printed using graphics: 0
+
+Memory usage:
+Strings                          25        512
+Page buffers                      1      10240
+Sorted page buffers               0          0
+Sorted page index                 0          0
+Position stack                   10        280
+Font table                        1         84
+Font indices                      1         10
+Page list                         1         50
+Characters                      256       8192
+Raster data                     220      18463
+Virtual fonts                     0          0
+VF characters                     0          0
+VF macros                         0          0
+Graphics                          0          0
+Lines                             0          0
+Font library directories          0          0
+Band buffer                       0          0
+TOTAL                                    37831
+
+Number of deallocations:      0
+Temporary file size:          0
+EMS bytes used:               0
+XMS bytes used:               0
+External memory reads:        0
+External memory writes:       0

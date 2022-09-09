@@ -1,0 +1,205 @@
+% dvidrv.err (1.4s)
+%
+% This file must be located in the PATH
+%
+% DO NOT MODIFY THIS FILE!
+
+% Warning messages
+
+1000 illegal number: %.*s
+1001 illegal number or unit of measure: %.*s
+1002 parameter too long: %.*s
+1005 illegal page number
+1008 ambiguous option: %s. Matching options are:
+1009 unknown option: %s
+1010 invalid unit of measure: %.*s
+1016 output file name ignored due to error in input file name
+1017 too many file names: `%s'
+1018 input file `%s' not found
+1019 cannot create output file `%s'
+1020 template too long
+1021 missing template
+1023 cannot nest response files
+1024 response file `%s' not found
+1025 invalid %s argument: %.*s
+1100 preamble data doesn't match postamble data:
+1200 checksum does not match
+1201 wrong design size
+1202 wrong magnification
+1203 character %ld: pixel width off by %+d
+1204 `%s' is not a usable font file
+1205 font %s [%s] not found
+1206 +batch-mode: font %s replaced by %s
+1207 cannot open font library file `%s'
+1208 font %s replaced by %s (deviation: %2.2f%%)
+1209 do you want to call MFjob to generate %ld missing font%s now?
+1210 `%s' is not a usable TFM file
+1211 font %s not loaded -- output will be distorted
+1212 TFM file for font `%s' not found
+1300 `%s' is not a usable graphic file
+1301 graphic file `%s' (graph %s; %ld DPI) not found
+1302 graph %s omitted
+1303 +batch-mode: graphic file %s (%ld DPI) not found
+1400 undefined point: %d
+1401 duplicate point number: %d
+1402 bad line omitted: %d,%d
+1403 missing moveto
+1500 printer not ready. R)etry or A)bort?
+1501 %ld warning messages were not displayed in graphics mode
+
+% Fatal errors
+
+2000 out of memory
+2001 cannot open %s file `%s'
+2002 cannot create file `%s'
+2003 cannot write to file `%s'
+2004 invalid scale factor
+2005 cannot use XON/XOFF flow control
+2006 serial interface time-out
+2007 out of string space
+2008 cannot open temporary file `%s'
+2009 temporary file write error (disk full?)
+2010 printer not ready, aborted by user
+2011 cannot read from console
+2012 out of virtual memory
+2100 DVI file corrupted (undefined font)
+2101 DVI file corrupted (no font selected)
+2102 DVI file corrupted (DVI file ended prematurely)
+2103 DVI file corrupted (position stack overflow)
+2104 DVI file corrupted (position stack underflow)
+2105 DVI file corrupted (bad postamble)
+2106 DVI file corrupted (postamble not found)
+2107 DVI file corrupted (illegal command in postamble)
+2108 input file is not a DVI file
+2109 DVI file corrupted (unexpected set_char command)
+2110 DVI file corrupted (unexpected fnt_num command)
+2111 DVI file corrupted (unexpected bop command)
+2112 DVI file corrupted (unexpected eop command)
+2113 DVI file corrupted (unexpected rule command)
+2114 DVI file corrupted (unexpected motion command)
+2116 DVI file corrupted (unexpected post_post command)
+2117 DVI file corrupted (unexpected pre command)
+2118 DVI file corrupted (invalid command)
+2119 DVI file corrupted (back pointer does not point to bop)
+2120 DVI file corrupted (more pages than claimed in postamble)
+2121 character number %ld out of range
+2122 page too complex
+2123 too many pages
+2124 too many points
+2125 too many lines
+2126 IVD files not supported yet
+2131 erroneous \\special{%s}: undefined keyword
+2132 erroneous \\special{%s}: bad parameter
+2200 +batch-mode: font %s not found
+2201 font file error PK01
+2202 font file error PK02
+2203 font file error PK03
+2204 font file error PK04
+2205 font %s too big (%ld characters)
+2206 character number %ld out of range
+2207 font file `%s' ended prematurely
+2208 font file `%s' disappeared
+2209 undefined character %d in font %s
+2210 character too big
+2211 character too big for reduction
+2213 `%s' is not a font library file
+2214 use `fontlib /2 /b%u %s' to convert font library
+2215 Cannot run MFjob, error code=%u
+2216 MFjob failed
+2220 TFM file `%s' corrupted
+2301 graphic file `%s' ended prematurely
+2302 graphic image too big
+2303 graphic image too big for reduction
+2400 syntax error in font substitution file `%s', line %ld
+2401 missing parameter file name
+2402 parameter file `%s' not found
+2403 invalid parameter file (%d)
+2404 incompatible parameter file, use makedot to convert
+2405 expression evaluation stack overflow
+2406 cannot compute checksum beyond end of header
+2407 output file doesn't allow random access 
+2408 cannot read output file
+2410 invalid page dimensions
+2501 printer memory overflow
+2502 too many fonts per page
+2503 too many fonts
+2511 page width exceeds %ldpx
+2520 graphics mode not supported
+2602 VF file corrupted (premature end of DVI commands)
+2603 VF file too complex: stack overflow
+2604 VF file corrupted (stack underflow)
+2608 VF file corrupted (bad preamble)
+2611 VF file corrupted (unexpected bop command)
+2612 VF file corrupted (unexpected eop command)
+2616 VF file corrupted (unexpected post_post command)
+2617 VF file corrupted (unexpected pre command)
+2618 VF file corrupted (invalid command)
+2621 VF file corrupted (unexpected fnt_def command)
+2622 VF file corrupted (unexpected post command)
+2640 input stack overflow
+2641 input stack underflow
+2643 VF file corrupted (invalid command)
+2644 character number %ld out of range
+2645 virtual font %s too big (%ld characters)
+
+% Internal errors
+
+3001 allocate: argument too big: %ld
+3002 dvi_get_u: invalid argument
+3003 dvi_get_s: invalid argument
+3004 load_pk: invalid flag_byte
+3005 load_char2: invalid font type
+3006 load_char2: reduction size mismatch
+3007 do_font_lru: font number not found
+3008 get_next_row: cache_fetch failed
+3009 reload_rfont: reloading failed
+3010 graph_start: entry not found
+3011 graph_start: file disappeared
+3012 graph_row: decoding of 2.x msp file failed
+3013 get_graph_height: entry not found
+3014 build_entry: invalid code
+3015 get_arg: unexpected value
+3016 print_page: invalid code %d
+3017 open_file: invalid argument
+3018 reallocate: realloc failed
+3019 output: stack underflow
+3020 output: stack overflow
+3021 vshow: string too long
+3022 invalid seq code: %d
+3023 invalid var code: %d
+3024 print_font_char: not downloaded
+3025 dvi_seek: input from memory
+3026 dvi_fnt_def: dfonts>=mfonts
+3027 dvi_fnt_def: report->lookup invalid
+3028 vf_fnt_def
+3029 access_rfont
+3030 print_char
+3031 access_vfont
+3040 print_page_sorted: invalid code %d
+3041 print_page_unsorted: invalid code %d
+3042 mginit1 failed
+3043 print_it: invalid code %d
+3050 ext_alloc: size = 0
+3051 page_access: out of range
+3052 sorted_access: out of range
+3053 ext_get: invalid mode
+3054 ext_put: invalid mode
+3055 temporary file read error
+3056 store_check case %c
+3057 unknown option type
+3058 scan_size_list failed
+3059 DosFreeSeg failed: %u
+3060 msp_write_init: unexpected error code
+3061 msp_write_end: unexpected error code
+3062 msp_write: unexpected error code
+3070 pal_compute
+3071 phys_colors
+3072 EMS error: %d
+3073 XMS error: %d
+3074 invalid transformation
+3075 invalid cut
+3086 get_next_row: not ok
+3087 Non-zero page_buffer lock count
+3088 Non-zero sorted_buffer lock count
+
+% End of dvidrv.err

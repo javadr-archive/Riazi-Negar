@@ -1,0 +1,387 @@
+% ARTICLE STANDARD DOCUMENT STYLE -- Released 14 Jan 1992
+%    for LaTeX version 2.09
+% Copyright (C) 1992 by Leslie Lamport
+% Modified for FARSI by Mohammad-Ali Massoumnia
+%
+\typeout{Standard Document Style `article' <14 Jan 92>.}
+
+\def\partname{QxsxmXt}                %%MAM Part
+\def\contentsname{FxhrSXt MxuaLXb}          %%MAM Contents
+\def\listfigurename{FxhrSXt Vxkxlxha} %%MAM List of Figures
+\def\listtablename{FxhrSXt JdAOl}     %%MAM List of Tables
+\def\refname{MrAJXe}                  %%MAM Refrences
+\def\indexname{RAHxnxma}                %%MAM Index
+\def\figurename{VxkXl}                %%MAM Figure
+\def\tablename{JdOl}                  %%MAM Table
+\def\abstractname{YCxkxidh}           %%MAM Abstract
+
+\def\@ptsize{0}
+\@namedef{ds@11pt}{\def\@ptsize{1}}
+\@namedef{ds@12pt}{\def\@ptsize{2}}
+\@namedef{ds@11NxqxuXh}{\def\@ptsize{1}}    %%MAM
+\@namedef{ds@21NxqxuXh}{\def\@ptsize{2}}    %%MAM
+
+\def\ds@twoside{\@twosidetrue
+           \@mparswitchtrue}
+\def\ds@DORO{\@twosidetrue
+           \@mparswitchtrue}
+
+\def\ds@draft{\overfullrule 5\p@}
+\def\ds@PxiXvNoIXs{\overfullrule 5pt}  %%MAM
+
+\newif\if@titlepage \@titlepagefalse
+\def\ds@titlepage{\@titlepagetrue}
+\def\ds@BrgExnoAn{\@titlepagetrue}
+
+\def\ds@twocolumn{\@twocolumntrue}
+\def\ds@DOSxtoNXh{\@twocolumntrue}     %%MAM
+
+\@options
+
+\input art1\@ptsize.sty\relax
+
+\def\labelenumi{\beginL\theenumi\endL.}  %%MAM
+\def\theenumi{\arabic{enumi}}
+
+\def\labelenumii{\theenumii-}  %%MAM
+\def\theenumii{\alph{enumii}}
+\def\p@enumii{\theenumi}
+
+\def\labelenumiii{\theenumiii.}
+\def\theenumiii{\roman{enumiii}}
+\def\p@enumiii{\theenumi(\theenumii)}
+
+\def\labelenumiv{\theenumiv-}  %%MAM
+\def\theenumiv{\Alph{enumiv}}
+\def\p@enumiv{\p@enumiii\theenumiii}
+
+\def\labelitemi{$\m@th\bullet$}
+\def\labelitemii{\bf --}
+\def\labelitemiii{$\m@th\ast$}
+\def\labelitemiv{$\m@th\cdot$}
+
+\def\verse{\let\\=\@centercr
+  \list{}{\itemsep\z@ \itemindent -1.5em\listparindent \itemindent
+          \rightmargin\leftmargin\advance\leftmargin 1.5em}\item[]}
+\let\endverse\endlist
+
+\def\quotation{\list{}{\listparindent 1.5em
+    \itemindent\listparindent
+    \rightmargin\leftmargin \parsep \z@ plus\p@}\item[]}
+\let\endquotation=\endlist
+
+\def\quote{\list{}{\rightmargin\leftmargin}\item[]}
+\let\endquote=\endlist
+
+\def\descriptionlabel#1{\hspace\labelsep \nasb #1}
+\def\description{\list{}{\labelwidth\z@ \itemindent-\leftmargin
+       \let\makelabel\descriptionlabel}}
+
+\let\enddescription\endlist
+
+\def\theequation{\arabic{equation}}
+
+\def\titlepage{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
+     \else \newpage \fi \thispagestyle{empty}\c@page\z@}
+
+\def\endtitlepage{\if@restonecol\twocolumn \else \newpage \fi}
+
+\arraycolsep 5pt
+
+\tabcolsep 6pt
+
+\arrayrulewidth .4pt
+\doublerulesep 2pt
+
+\tabbingsep \labelsep
+
+\skip\@mpfootins = \skip\footins
+
+\fboxsep = 3pt
+
+\fboxrule = .4pt
+
+\newcounter{part}
+\newcounter {section}
+\newcounter {subsection}[section]
+\newcounter {subsubsection}[subsection]
+\newcounter {paragraph}[subsubsection]
+\newcounter {subparagraph}[paragraph]
+
+\def\thepart          {\Roman{part}}
+\def\thesection       {\arabic{section}}
+\def\thesubsection    {\thesection.\arabic{subsection}}
+\def\thesubsubsection {\thesubsection .\arabic{subsubsection}}
+\def\theparagraph     {\thesubsubsection.\arabic{paragraph}}
+\def\thesubparagraph  {\theparagraph.\arabic{subparagraph}}
+
+\def\part{\par
+   \addvspace{4ex}
+   \@afterindentfalse
+   \secdef\@part\@spart}
+
+\def\@part[#1]#2{\ifnum \c@secnumdepth >\m@ne
+        \refstepcounter{part}
+        \addcontentsline{toc}{part}{\thepart
+        \hspace{1em}#1}\else
+      \addcontentsline{toc}{part}{#1}\fi
+   {\parindent \z@ \raggedleft    %%MAM
+    \interlinepenalty \@M
+    \ifnum \c@secnumdepth >\m@ne
+    \Large \nasb \partname~\beginL\thepart\endL % THEN Print '\partname' %%MAM
+      \par\nobreak
+    \fi
+    \huge \nasb  %%MAM
+    #2%
+    \markboth{}{}\par
+   }\nobreak
+   \vskip 3ex
+   \@afterheading
+  }
+
+\def\@spart#1{{\parindent \z@ \raggedright
+    \interlinepenalty \@M
+    \huge \nasb   %%MAM
+    #1\par}
+    \nobreak
+    \vskip 3ex
+    \@afterheading
+  }
+
+\def\@pnumwidth{1.65em} %1.55em %%MAM
+\def\@tocrmarg {2.55em}
+\def\@dotsep{4.4}  %4.5 %%MAM
+\setcounter{tocdepth}{3}
+
+\def\tableofcontents{\section*{\contentsname
+        \@mkboth{\contentsname}{\contentsname}}%%MAM
+  \@starttoc{toc}}
+
+\def\l@part#1#2{\addpenalty{\@secpenalty}%
+   \addvspace{2.25em plus\p@}%
+   \begingroup
+   \@tempdima 3em
+     \parindent \z@ \rightskip \@pnumwidth
+     \parfillskip -\@pnumwidth
+     {\large \nasb   %%MAM
+     \leavevmode
+     #1\hfil \hbox to\@pnumwidth{\hss\beginL #2\endL}}\par
+     \nobreak
+   \endgroup}
+
+\def\l@section#1#2{\addpenalty{\@secpenalty}% good place for page break
+   \addvspace{1.0em plus\p@}%
+   \@tempdima 1.5em
+   \begingroup
+     \parindent \z@ \rightskip \@pnumwidth
+     \parfillskip -\@pnumwidth
+     \nasb   %%MAM
+     \leavevmode
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+     #1\nobreak\hfil \nobreak\hbox to\@pnumwidth{\hss\beginL #2\endL}\par
+   \endgroup}
+
+\def\l@subsection{\@dottedtocline{2}{1.5em}{2.3em}}
+\def\l@subsubsection{\@dottedtocline{3}{3.8em}{3.2em}}
+\def\l@paragraph{\@dottedtocline{4}{7.0em}{4.1em}}
+\def\l@subparagraph{\@dottedtocline{5}{10em}{5em}}
+
+\def\listoffigures{\section*{\listfigurename
+    \@mkboth{\listfigurename}{\listfigurename}}%%MAM
+  \@starttoc{lof}}
+
+\def\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
+
+\def\listoftables{\section*{\listtablename\@mkboth
+   {\listtablename}{\listtablename}}%%MAM
+  \@starttoc{lot}}
+\let\l@table\l@figure
+
+\def\thebibliography#1{\section*{\refname\@mkboth
+  {\refname}{\refname}}\list    %%MAM
+  {\@biblabel{\arabic{enumiv}}}{\settowidth\labelwidth{\@biblabel{#1}}%
+    \leftmargin\labelwidth
+    \advance\leftmargin\labelsep
+    \usecounter{enumiv}%
+    \let\p@enumiv\@empty
+    \def\theenumiv{\arabic{enumiv}}}%
+    \def\newblock{\hskip .11em plus.33em minus.07em}%
+    \sloppy\clubpenalty4000\widowpenalty4000
+    \sfcode`\.=1000\relax}
+
+\def\endthebibliography{%
+  \def\@noitemerr{\@warning{Empty `thebibliography' environment}}%
+  \endlist}
+
+\newif\if@restonecol
+
+\def\theindex{\@restonecoltrue\if@twocolumn\@restonecolfalse\fi
+\columnseprule \z@
+\columnsep 35\p@\twocolumn[\section*{\indexname}]%
+    \@mkboth{\indexname}{\indexname}%%MAM
+    \thispagestyle{plain}\parindent\z@
+    \parskip\z@ plus.3\p@\relax\let\item\@idxitem}
+
+\def\@idxitem{\par\hangindent 40\p@}
+
+\def\subitem{\par\hangindent 40\p@ \hspace*{20\p@}}
+
+\def\subsubitem{\par\hangindent 40\p@ \hspace*{30\p@}}
+
+\def\endtheindex{\if@restonecol\onecolumn\else\clearpage\fi}
+
+\def\indexspace{\par \vskip 10\p@ plus5\p@ minus3\p@\relax}
+
+
+\def\footnoterule{\kern-3\p@                               %%MAM
+  \nointerlineskip\hbox to \columnwidth{\beginL\hfill%     %%MAM
+ \vbox{\hrule width .4\columnwidth}\endL} \nointerlineskip %%MAM
+  \kern 2.6\p@}
+
+
+%\long\def\@makefntext#1{\parindent 1em\beginR\nask %%MAM
+%            {\rm\hbox to 1.8em{\hss$\m@th^{\@thefnmark}$}}#1}
+\long\def\@makefntext#1{\parindent 1em\beginR\nask %%MAM
+{\rm\hbox to 1.8em{\hss\raise1ex\hbox{\beginL\scriptsize\@thefnmark\endL}}}#1}
+
+\setcounter{topnumber}{2}
+\def\topfraction{.7}
+\setcounter{bottomnumber}{1}
+\def\bottomfraction{.3}
+\setcounter{totalnumber}{3}
+\def\textfraction{.2}
+\def\floatpagefraction{.5}
+\setcounter{dbltopnumber}{2}
+\def\dbltopfraction{.7}
+\def\dblfloatpagefraction{.5}
+
+
+\long\def\@makecaption#1#2{%
+   \vskip 10\p@
+   \setbox\@tempboxa\hbox{\beginR{\nass #1: #2}\endR}%  %%MAM
+   \ifdim \wd\@tempboxa >\hsize
+       \beginR\nass #1: #2\par                          %%MAM
+     \else
+       \hbox to\hsize{\hfil\box\@tempboxa\hfil}%        %%MAM
+   \fi}
+
+\newcounter{figure}
+\def\thefigure{\@arabic\c@figure}
+
+\def\fps@figure{tbp}
+\def\ftype@figure{1}
+\def\ext@figure{lof}
+\def\fnum@figure{\figurename~\beginL\thefigure\endL}  %%MAM
+\def\figure{\@float{figure}}
+\let\endfigure\end@float
+\@namedef{figure*}{\@dblfloat{figure}}
+\@namedef{endfigure*}{\end@dblfloat}
+
+\newcounter{table}
+\def\thetable{\@arabic\c@table}
+
+\def\fps@table{tbp}
+\def\ftype@table{2}
+\def\ext@table{lot}
+\def\fnum@table{\tablename~\beginL\thetable\endL}    %%MAM
+\def\table{\@float{table}}
+\let\endtable\end@float
+\@namedef{table*}{\@dblfloat{table}}
+\@namedef{endtable*}{\end@dblfloat}
+
+\def\maketitle{\par
+ \begingroup
+   \def\thefootnote{\fnsymbol{footnote}}%
+   \def\@makefnmark{\hbox
+       to\z@{\raise 1ex\hbox{\beginL\scriptsize\@thefnmark\endL}\hss}}%
+   \if@twocolumn
+     \twocolumn[\@maketitle]%
+     \else \newpage
+     \global\@topnum\z@
+     \@maketitle \fi\thispagestyle{plain}\@thanks
+ \endgroup
+ \setcounter{footnote}{0}%
+ \let\maketitle\relax
+ \let\@maketitle\relax
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+
+\def\@maketitle{\newpage
+ \null
+ \vskip 2em
+ \begin{center}%
+  {\LARGE \@title \par}%
+  \vskip 1.5em
+  {\large
+   \lineskip .5em 
+\begingroup\def\@tabular{\leavevmode \hbox \bgroup $\let\@acol\@tabacol
+   \let\@classz\@tabclassz
+   \let\@classiv\@tabclassiv \def\\{\endR\@tabularcr\beginR}\@tabarray}
+      \begin{tabular}[t]{c}%
+\beginR\@author\endR \end{tabular}\par\endgroup}%
+  \vskip 1em
+  {\large \@date}%
+ \end{center}%
+ \par
+ \vskip 1.5em}
+
+\def\abstract{\if@twocolumn
+\section*{\abstractname}%
+\else \small
+\begin{center}%
+{\nasb \abstractname\vspace{-.5em}\vspace{\z@}}%
+\end{center}%
+\quotation
+\fi}
+
+\def\endabstract{\if@twocolumn\else\endquotation\fi}
+
+\mark{{}{}}
+
+\if@twoside
+ \def\ps@headings{\let\@mkboth\markboth
+  \def\@oddfoot{}\def\@evenfoot{}%       No feet.
+  \def\@evenhead{\nask\beginL\thepage\endL\hfil%
+ \nass\beginR\leftmark\endR}%%MAM Left heading.
+  \def\@oddhead{\nass\beginR\rightmark\endR\hfil%
+ \nask\beginL\thepage\endL}%%MAM Right heading.
+  \def\sectionmark##1{\markboth {\ifnum \c@secnumdepth >\z@
+    \beginL\thesection\endL\hskip 1em\relax \fi ##1}{}}%
+  \def\subsectionmark##1{\markright {\ifnum \c@secnumdepth >\@ne
+          \beginL\thesubsection\endL\hskip 1em\relax \fi ##1}}}
+\else
+ \def\ps@headings{\let\@mkboth\markboth
+  \def\@oddfoot{}\def\@evenfoot{}%     No feet.
+  \def\@oddhead{\nask\beginL\thepage\endL\hfil%
+      \nass\beginR\rightmark\endR}%%MAM Heading.
+  \def\sectionmark##1{\markright {\ifnum \c@secnumdepth >\z@
+    \beginL\thesection\endL\hskip 1em\relax \fi ##1}}}
+\fi
+
+
+\def\ps@myheadings{\let\@mkboth\@gobbletwo
+ \def\@oddhead{\nass\beginR\rightmark\endR\hfil %
+   \nask\beginL\thepage\endL}   %%MAM
+ \def\@oddfoot{}\def\@evenhead{\nask \beginL\thepage\endL\hfil %
+   \nass\beginR\leftmark\endR}  %%MAM
+ \def\@evenfoot{}\def\sectionmark##1{}\def\subsectionmark##1{}}
+
+\def\today{\beginL\number\day\endL\space\ifcase\month\or
+  YJANoIXh\or FoRIXh\or MaRs\or XaORIXl\or MXi\or YJOYEXn\or
+  YJOYExiXh\or AOt\or SxpxtaMxbr\or AKxtxbr\or NoAMxbr\or DSaMxbr\fi,
+  \beginL\number\year\endL}
+
+\ps@plain
+\pagenumbering{arabic}
+\if@twoside\else\raggedbottom\fi
+\if@twocolumn
+ \@@input twocolum.sty\relax
+\else
+ \onecolumn
+\fi
+
+\if@titlepage
+  \@@input titlepag.sty\relax
+\fi
+
+\endinput

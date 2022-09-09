@@ -1,0 +1,31 @@
+% openbib.sty 12-Oct-87   modified for international usage
+%
+% Modified by J.Schrod (TeXsys).
+% according to the suggestion of H.Partl (TU Wien) in german.sty
+% to make caption names adaptable to other languages.
+ 
+\@ifundefined{refname}{\def\refname{References}}{}   % <----------
+\@ifundefined{bibname}{\def\bibname{Bibliography}}{} % <----------
+ 
+\newdimen\bibindent
+\bibindent=1.5em
+\@ifundefined{chapter}{%
+   \let\@bibname\refname
+   }{%
+   \let\@bibname\bibname
+   }
+ 
+\def\thebibliography#1{\chapter*{\@bibname\@mkboth
+ {\uppercase{\@bibname}}{\uppercase{\@bibname}}}\list
+ {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}
+ \leftmargin\labelwidth
+ \advance\leftmargin\labelsep
+ \advance\leftmargin\bibindent
+ \itemindent -\bibindent
+ \listparindent \itemindent
+ \parsep \z@
+ \usecounter{enumi}}
+ \def\newblock{\par}
+ \sloppy
+ \sfcode`\.=1000\relax}
+ 

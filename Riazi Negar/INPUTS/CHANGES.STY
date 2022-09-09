@@ -1,0 +1,277 @@
+%
+% changes.sty     The change file for FARSI-LaTeX package
+% By Mohammad-Ali Massoumnia
+% (C) Riazi-Negar 1993
+%
+\let\@chgtoenglish=\chgtoenglish
+\let\@chgtofarsi=\chgtofarsi
+\def\@fixtheparshape{\ifnum\@listdepth>\z@ %
+\parshape \@ne \if@farsimode\rightmargin\else\@totalleftmargin\fi %
+\linewidth\fi}
+\def\chgtoenglish{\@chgtoenglish\@fixtheparshape }
+\def\chgtofarsi{\@chgtofarsi\@fixtheparshape }
+
+\def\@biblabel#1{[\beginL #1\endL]}
+
+\def\dotfill{\cleaders\hbox{$\m@th \mkern1.5mu\hbox{.}\mkern1.5mu$}\hfill}
+\def\doteq{\buildrel\textstyle\hbox{.}\over=}
+ 
+%\long\def\@iparbox[#1]#2#3{\leavevmode \@pboxswfalse
+%   \if #1b \ifmmode \vbox \else $\vbox \fi
+%     \else \if #1t \ifmmode \vtop \else $\vtop \fi
+%              \else \ifmmode \vcenter
+%                        \else \@pboxswtrue $\vcenter
+%                     \fi
+%           \fi
+%% RmS 91/11/04 added \m@th
+%    \fi{\hsize #2\@parboxrestore #3}\m@th$}
+
+\def\KxvxidhMxtyqxir{\def\2{\setbox0=\hbox{\char221}%
+%\dimen255=\wd0 \advance \dimen255 by 0.003in%
+\nobreak\hskip-0.005em\nobreak\leaders\hrule height \wd0% dimen255 %
+depth -0.0018in\hskip 0.01em%
+ plus0.2em\nobreak\hskip-0.005em\nobreak}}
+\def\KxvxidhYSaBXt{\def\2{{\char20}}}
+\KxvxidhMxtyqxir
+
+\def\tabular{\let\@halignto\@empty\gdef\@Farsi##1{\beginR ##1\endR}\@tabular}
+
+\def\array{\let\@acol\@arrayacol \let\@classz\@arrayclassz 
+\gdef\@Farsi##1{##1}%
+ \let\@classiv\@arrayclassiv \let\\\@arraycr\let\@halignto\@empty\@tabarray}
+
+\def\multicolumn#1#2#3{\multispan{#1}\begingroup
+\@mkpream{#2}%
+\def\@sharp{\@Farsi{#3}}\let\protect\relax
+  \let\@startpbox\@@startpbox\let\@endpbox\@@endpbox
+  \@arstrut \@preamble\hbox{}\endgroup\ignorespaces}
+
+ 
+\def\@arrayclassz{\ifcase \@lastchclass \@acolampacol \or \@ampacol \or
+   \or \or \@addamp \or
+   \@acolampacol \or \@firstampfalse \@acol \fi
+\edef\@preamble{\@preamble
+  \ifcase \@chnum
+     \hfil$\relax\@Farsi{\@sharp}$\hfil \or $\relax\@Farsi{\@sharp}$\hfil
+    \or \hfil$\relax\@Farsi{\@sharp}$\fi}}
+
+ 
+%% RmS 91/08/14 inserted extra braces around entry for NFSS
+\def\@tabclassz{\ifcase \@lastchclass \@acolampacol \or \@ampacol \or
+   \or \or \@addamp \or
+   \@acolampacol \or \@firstampfalse \@acol \fi
+\edef\@preamble{\@preamble{%
+  \ifcase \@chnum
+     \hfil\@Farsi{\ignorespaces\@sharp}\unskip\hfil
+     \or \@Farsi{\ignorespaces\@sharp}\unskip\hfil
+     \or \hfil\hskip\z@ \@Farsi{\ignorespaces\@sharp}\unskip\fi}}}
+
+\def\@classv{\@addtopreamble{\@startpbox{\@nextchar}%
+\@Farsi{\ignorespaces\@sharp}\@endpbox}}
+
+\def\@ABxjd#1{\ifcase#1\or \beginR ALXf\endR\or b\or j\or D\else%
+\@IABxjd{#1}\fi}
+\def\@IABxjd#1{\ifcase#1\or \or \or \or \or H\or O\or YZ\or Yh\or u\or i\or
+   k\or l\or m\or n\or s\or e\or f\or c\or q\or R\or v\or t\or 
+Ys\or  w\or Z\or Yd\or Yu\or Yq\else\@ctrerr\fi}
+
+\def\AEdADFaRSXi{
+\mathcode`0="7530
+\mathcode`1="7531
+\mathcode`2="7532
+\mathcode`3="7533
+\mathcode`4="7534
+\mathcode`5="7535
+\mathcode`6="7536
+\mathcode`7="7537
+\mathcode`8="7538
+\mathcode`9="7539
+\mathcode`\.="6527{}}
+
+\def\AEdADANxgxlxixsXi{
+\mathcode`0="7030
+\mathcode`1="7031
+\mathcode`2="7032
+\mathcode`3="7033
+\mathcode`4="7034
+\mathcode`5="7035
+\mathcode`6="7036
+\mathcode`7="7037
+\mathcode`8="7038
+\mathcode`9="7039
+\mathcode`\.="013A{}}
+
+\AEdADFaRSXi
+
+\def\mbox#1{\leavevmode\hbox{\beginL\rm #1\endL}}
+\@namedef{MxeaDylt*}{\def\@eqncr{\nonumber\@seqncr}\eqnarray}
+\@namedef{endMxeaDylt*}{\nonumber\endeqnarray}
+
+\def\TaKxid{\protect\pTaKxid{}}
+\def\pTaKxid{\relax\ifdim \fontdimen\@ne\font =\z@ \nass\else \nask \fi} %%MAM
+\def\and{\endR\end{tabular}\hskip 1em plus 0.17fil %
+  \begin{tabular}[t]{c}\beginR}
+\def\KrOVXhBaYZ{]}
+\def\KrOVXhBxsxtXh{[}
+\def\indexname{RAHxnxma}
+\def\PaIxiXnXaYZAD{\raggedbottom}
+\def\PaRAGrAf{\paragraph}
+\def\YZIrPaRAGrAf{\subparagraph}
+
+\def\@fverbatim{\trivlist \item[]\if@minipage\else\vskip\parskip\fi
+%\leftskip\@totalleftmargin\rightskip\z@
+\leftskip\z@\rightskip\@totalleftmargin
+\parindent\z@\parfillskip\@flushglue\parskip\z@
+%%RmS 91/08/26 Added \@@par to clear possible \parshape definition
+%%from a surrounding list (the verbatim guru says)
+\@@par 
+\@tempswafalse \def\par{\if@tempswa\hbox{}\fi\@tempswatrue\@@par %
+\penalty\interlinepenalty} \obeylines\nadc\dofarsispecial}
+
+{\catcode`\^^M=13
+\gdef\E#1^^M{\endR\null\@inbraces%
+\leavevmode\beginL{\tt\hbox to 0pt{\hss$\rightarrow$}#1}\@outbraces\@@par}
+\gdef\f#1^^M{\leavevmode\@outbraces\hbox to 0pt{\hss$\leftarrow$}#1\@@par}
+}
+
+\def\fverbatim{\@fverbatim\frenchspacing\@vobeyspaces}
+\let\endfverbatim=\endtrivlist
+
+\def\FxeXl{\begingroup \nadc \dofarsispecial \@ifstar{\@fsverb}{\@fverb}}
+\def\@fsverb#1{\def\@tempa ##1#1{\leavevmode\null\beginR##1\endR%
+\endgroup}\@tempa}
+\def\@fverb{\@vobeyspaces\frenchspacing\@fsverb}
+
+\def\dofarsispecial{%
+\def\alef{{\nasb\char"41}}%
+\def\beh{{\nasb\char"62}}%
+\def\peh{{\nasb\char"70}}%
+\def\teh{{\nasb\char"74}}%
+\def\sseh{{\nasb\char"A0}}%
+\def\gim{{\nasb\char"6A}}%
+\def\cheh{{\nasb\char"A1}}%
+\def\hheh{{\nasb\char"A2}}%
+\def\kheh{{\nasb\char"77}}%
+\def\dal{{\nasb\char"44}}%
+\def\zal{{\nasb\char"5A}}%
+\def\reh{{\nasb\char"52}}%
+\def\zeh{{\nasb\char"91}}%
+\def\jeh{{\nasb\char"83}}%
+\def\siin{{\nasb\char"73}}%
+\def\shin{{\nasb\char"76}}%
+\def\sad{{\nasb\char"63}}%
+\def\zad{{\nasb\char"A3}}%
+\def\tah{{\nasb\char"75}}%
+\def\zah{{\nasb\char"A4}}%
+\def\ain{{\nasb\char"65}}%
+\def\ghain{{\nasb\char"A5}}%
+\def\feh{{\nasb\char"66}}%
+\def\qaf{{\nasb\char"71}}%
+\def\kaf{{\nasb\char"6B}}%
+\def\gaf{{\nasb\char"67}}%
+\def\lam{{\nasb\char"6C}}%
+\def\mim{{\nasb\char"6D}}%
+\def\nun{{\nasb\char"6E}}%
+\def\vav{{\nasb\char"4F}}%
+\def\heh{{\nasb\char"68}}%
+\def\yeh{{\nasb\char"69}}%
+\def\momayez{{\nasb\char"27}}%
+\def\hamzeh{{\nasb\char"CE}}%
+\def\digsep{{\nasb\char"26}}%
+\def\asefr{{\nasb\char"D4}}%
+\def\achahar{{\nasb\char"D5}}%
+\def\apanj{{\nasb\char"D6}}%
+\def\ashesh{{\nasb\char"D7}}%
+\def\sefr{{\nasb\char"30}}%
+\def\yek{{\nasb\char"31}}%
+\def\dow{{\nasb\char"32}}%
+\def\seh{{\nasb\char"33}}%
+\def\chahar{{\nasb\char"34}}% 
+\def\panj{{\nasb\char"35}}% 
+\def\shesh{{\nasb\char"36}}% 
+\def\haft{{\nasb\char"37}}%
+\def\hasht{{\nasb\char"38}}%
+\def\noh{{\nasb\char"39}}%
+\catcode`<=1 \catcode`>=2 \catcode`|=0 
+\catcode`\$=12 \catcode`\#=12 \catcode`\_=13 
+\catcode`\^=13 \catcode`\&=13 \catcode`\~=13 
+\catcode`[=13 \catcode`]=13
+\catcode`\%=12 \catcode`\{=13 \catcode`\}=13 \catcode`\\=13\@farsspecial}
+
+\def\reverseshade#1{\underline{#1}}
+
+\begingroup
+\gdef\farsibbrace{{\tt\char123}}%
+\gdef\farsiebrace{{\tt\char125}}%
+\gdef\farsibbraket{{\tt\char91}}%
+\gdef\farsiebraket{{\tt\char93}}%
+\gdef\farsibackslash{{\tt\char92}}%
+\catcode`<=1 \catcode`>=2 \catcode`|=0 
+\catcode`\^=13 \catcode`\&=13 \catcode`\~=13 \catcode`\_=13 
+\catcode`[=13 \catcode`]=13
+\catcode`\{=13 \catcode`\}=13 \catcode`\\=13 
+|gdef|@farsspecial<|def_<<|tt|char95>>|def^<<|tt|char94>>%
+|def&<<|tt|char38>>|def~<<|tt|char126>>%
+|def\<|farsibackslash>%
+|def|@inbraces<|def}<|farsiebrace>|def{<|farsibbrace>%
+|def]<|farsiebraket>|def[<|farsibbraket>>%
+|def|@outbraces<|def}<|farsibbrace>|def{<|farsiebrace>%
+|def]<|farsibbraket>|def[<|farsiebraket>>%
+|@outbraces |def|(##1|)<|@inbraces%
+|reverseshade<|hbox<|tt|beginL ##1|endL>>|@outbraces>%
+|def|F##1<|@outbraces%
+|reverseshade<|hbox<|nask|beginR ##1|endR>>|@inbraces>%
+>|endgroup
+
+
+
+%% The default is for left-hand side of equations to be flushright.
+%% To make them flushleft, \let\@eqnsel = \relax
+
+\let\@eqnsel\hfil
+
+%% There are two main modifications.  First, I removed the
+%% \hskip\@centering from the beginning of the preamble.  This \hskip
+%% was, as far as I can tell, superfluous and was crippling \@eqnsel.
+%% Second, I removed the two occurences of \hskip 2\arraycolsep and
+%% change the template for the second column to ${{}##{}}$.  This
+%% restores the proper amount of space around the second column of the
+%% eqnarray.  I also introduced the parameters \@eqnmar and \@eqnhook
+%% to provide support for the flush left equation style.
+
+\newskip\@eqnmar
+\@eqnmar\@centering
+
+\let\@eqnhook\relax
+
+\def\eqnarray{\stepcounter{equation}\let\@currentlabel=\theequation
+\global\@eqnswtrue
+\global\@eqcnt\z@\tabskip\@eqnmar\let\\=\@eqncr
+\@eqnhook
+$$\halign to \displaywidth\bgroup\@eqnsel
+  $\displaystyle\tabskip\z@{##}$&\global\@eqcnt\@ne
+  \hfil${{}##{}}$\hfil&\global\@eqcnt\tw@
+  $\displaystyle{##}$\hfil
+  \tabskip\@centering&\llap{##}\tabskip\z@\cr}
+
+%% Since we've removed the \arraycolsep's from \eqnarray, we have to
+%% redefine \lefteqn to put that space back in.  It seems unlikely
+%% that \arraycolsep is really what should be used here, but the
+%% following definition maintains compatibility with the old
+%% definition of eqnarray.
+
+\def\lefteqn#1{\hbox to 4\arraycolsep{$\displaystyle #1$\hss}}
+
+%% Finally, if fleqn.sty has been invoked earlier, we set
+%% \@eqnmar=\mathindent and redefine \@eqnhook to futz around with
+%% \abovedisplayskip and friends.  Hopefully no-one else will define
+%% \mathindent.
+
+\@ifundefined{mathindent}{}{\@eqnmar\mathindent
+    \def\@eqnhook{\abovedisplayskip\topsep
+    \ifvmode\advance\abovedisplayskip\partopsep\fi
+    \belowdisplayskip\abovedisplayskip
+    \belowdisplayshortskip\abovedisplayskip
+    \abovedisplayshortskip\abovedisplayskip}}
+
+\endinput

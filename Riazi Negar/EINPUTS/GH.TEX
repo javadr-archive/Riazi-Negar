@@ -1,0 +1,14 @@
+% gh.tex  August 1990, Georg Horn.
+%
+% LaTeX-Datei zum Testen von (mit TeXcad erzeugten) picture environments.
+%
+\documentstyle[emlines2,german]{article}
+\textwidth=16cm\textheight=24.5cm
+\advance\textheight by -\headsep\advance\textheight by -\headheight
+\oddsidemargin=0pt\evensidemargin=0pt\topmargin=0pt
+\parindent=0pt\parskip=6pt plus 3pt minus 2pt
+\raggedbottom\sloppy\pagestyle{headings}
+
+\begin{document}\typeout{}
+\typein[\picfile]{Enter name of (picture)file:}\input\picfile
+\end{document}

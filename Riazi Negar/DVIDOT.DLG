@@ -1,0 +1,98 @@
+% dvidot 1.4s  15-Feb-1997  18:52
+%
+% Parameter file: lqwh.dot
+% Input file: CHEK2.dvi
+% Output file: PRN
+%
+/b:*
+/d:-
+/e:*
+/k:0
+/n:65535
+/nf:1
+/np:1
+/z-
+/cf:1
+/cp:1
+/cs:1
+/fi
+/fl:300
+/fm:lqhires
+/fo-
+/fs:1
+/fd:2
+/ft:0.2
+/fu-
+/fz::0,:h,:1,:2,:3,:4,:5,:6,:7,:8,:9
+/l:1in
+/la:0px
+/t:1in
+/ta:0px
+/h:12in
+/w:13.6in
+/tr:0
+/r:360
+/rf:360
+/rg:0
+/pd:{,$DVIDRVINPUT:}@i
+/pf:$DVIDRVFONTS:pixel.p6h\@Rrdpi\@f{.pk,.pxl}
+/pg:{,$DVIDRVGRAPH:}{@Rrdpi\,}@PBf{@Ef,.msp,.pcx,.bmp}
+/pi:
+/pj:C:\TEXXET\dv2.mfj
+/pl:$DVIDRVFONTS:p6h_{0,h,1,2,3,4,5,r,sli,7,8}
+/pm:{$TEXTFM:,\emtex\tfm\}@f
+/po:prn
+/pr:{,$PATH:}@f
+/ps:
+/pt:dvidot.dlg
+/pv:
+/pw:
+/v:2
+/u:in
+/xe+
+/xx+
+/oa-
+/os:0
+/ox-
+/s-
++initial-formfeed:off
++final-formfeed:on
+/ci:1 /cx:0in /cy:0in
+/ci:1
+@
+
+' TeX output 1997.02.15:1852'
+Loading font cmr17 scaled 1000  (C:\TEXXET\FONTS\p6h_0.fli [cmr17])
+Loading font como10 scaled 1200  (C:\TEXXET\FONTS\p6h_7.fli [como10])
+Loading font cmmi12 scaled 1000  (C:\TEXXET\FONTS\p6h_0.fli [cmmi12])
+Loading font cmr12 scaled 1000  (C:\TEXXET\FONTS\p6h_0.fli [cmr12])
+Loading font cmmi8 scaled 1000  (C:\TEXXET\FONTS\p6h_0.fli [cmmi8])
+Loading page pointers... 1 input page, 1 output page.
+ [1]
+
+Memory usage:
+Strings                          38       1024
+Page buffers                      2      20480
+Sorted page buffers               2      20480
+Sorted page index              4320      34560
+Position stack                    8        224
+Font table                        5        420
+Font indices                      5         50
+Page list                         1         50
+Characters                      768      24576
+Raster data                     683      85725
+Virtual fonts                     0          0
+VF characters                     0          0
+VF macros                         0          0
+Graphics                          0          0
+Lines                             0          0
+Font library directories          0          0
+Band buffer                       0          0
+TOTAL                                   187589
+
+Number of deallocations:      0
+Temporary file size:          0
+EMS bytes used:               0
+XMS bytes used:               0
+External memory reads:        0
+External memory writes:       0

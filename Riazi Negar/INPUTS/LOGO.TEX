@@ -1,0 +1,14 @@
+\newbox\logobox
+\newdimen\logow
+\font\logoa=logoa at 72.27truept
+\setbox\logobox=\vbox{\hbox{%
+\logoa\char0\char1}}
+\logow=\wd\logobox
+\setbox\logobox=\hbox{\vbox{\hsize=\logow
+\parskip=0pt\offinterlineskip\parindent0pt
+\hbox{\logoa\char0\char1}}}
+\ifx\parbox\undefined
+    \def\setlogo{\box\logobox}
+\else
+    \def\setlogo{\parbox{\wd\logobox}{\box\logobox}}
+\fi

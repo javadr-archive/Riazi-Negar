@@ -1,0 +1,14 @@
+\newbox\sheshbox
+\newdimen\sheshw
+\font\shesha=shesha at 72.27truept
+\setbox\sheshbox=\vbox{\hbox{%
+\shesha\char0}}
+\sheshw=\wd\sheshbox
+\setbox\sheshbox=\hbox{\vbox{\hsize=\sheshw
+\parskip=0pt\offinterlineskip\parindent0pt
+\hbox{\shesha\char0}}}
+\ifx\parbox\undefined
+    \def\setshesh{\box\sheshbox}
+\else
+    \def\setshesh{\parbox{\wd\sheshbox}{\box\sheshbox}}
+\fi

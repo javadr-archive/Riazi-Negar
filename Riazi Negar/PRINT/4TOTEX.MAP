@@ -1,0 +1,333 @@
+386|LINK: 4.1L -- Copyright (C) 1986-91 Phar Lap Software, Inc.
+Target CPU is 80386
+
+
+Command line switches:
+
+-DEFSTUBNAME gorunb -LIBPATH C:\F77L3\LIB
+4TOTEX -SYMBOL
+
+
+Input module(s):
+
+Stub "GORUNB" from file "C:\F77L3\LIB\dosx.lib"  [Thu Jul  9 11:44:14 1992].
+"4TOTEX" from file "4TOTEX.obj"  [Sun Mar 12 06:12:56 1995].
+"lfinit" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"fmtin" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"fmtot" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"minimum" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"open" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"ereport" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"87util" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"intel" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"cheqs" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"afmtio" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"fcb" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"fmtio" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"iomisc" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"lfctype" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"memory" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"cstring" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"dosio" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"ioconv" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"lfgetenv" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"inter" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"cstub_if" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"adirect" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+"break" from file "C:\F77L3\LIB\f77l3.lib"  [Fri Jan  8 10:00:32 1993].
+
+
+Segment map
+
+     Name         Group         Class     Type   Offset     Size
+------------  ------------  ------------  ----  --------  --------
+??rminit                    code          COM   00000000  00000000
+??code        cgroup        code          PUB   00000000  00002000
+??lfanchor    cgroup        code          PUB   00002000  00000000
+??lfusrnit                  code          PUB   00002000  00000000
+??lfusrtrm                  code          PUB   00002000  00000000
+code          cgroup        code          PUB   00002000  000019E2
+literals      cgroup        code          PUB   000039E4  0000031C
+FMTIN         cgroup        code          PVT   00003D00  000019BC
+FMTOT         cgroup        code          PVT   000056BC  0000171C
+MINIMUM       cgroup        code          PVT   00006DD8  0000055C
+OPEN          cgroup        code          PVT   00007334  0000124C
+EREPORT       cgroup        code          PVT   00008580  00000C48
+AFMTIO        cgroup        code          PVT   000091C8  000001E8
+FCB           cgroup        code          PVT   000093B0  0000014C
+FMTIO         cgroup        code          PVT   000094FC  00001098
+IOMISC        cgroup        code          PVT   0000A594  00000954
+MEMORY        cgroup        code          PVT   0000AEE8  000005CC
+LFGETENV      cgroup        code          PVT   0000B4B4  0000008C
+ADIRECT       cgroup        code          PVT   0000B540  00000208
+BREAK         cgroup        code          PVT   0000B748  0000012C
+??data        dgroup        data          PUB   0000C000  00001000
+_lc_latex                   data          COM   0000D000  000000E0
+??GRAPH0      dgroup        data          COM   0000D0E0  00000004
+??INTER       dgroup        data          COM   0000D0E4  00000004
+??SYSTEM      dgroup        data          COM   0000D0E8  00000004
+??RPC         dgroup        data          COM   0000D0EC  00000009
+??CYRIX       dgroup        data          COM   0000D0F8  00000004
+??WEITEK      dgroup        data          COM   0000D0FC  00000004
+??INTEL       dgroup        data          COM   0000D100  00000004
+@FMTIN        dgroup        data          PVT   0000D104  00000090
+_MWLITERALS   dgroup        data          PUB   0000D194  00000288
+@FMTOT        dgroup        data          PVT   0000D41C  0000006C
+@MINIMUM      dgroup        data          PVT   0000D488  0000007C
+@OPEN         dgroup        data          PVT   0000D504  00000228
+@EREPORT      dgroup        data          PVT   0000D72C  000009D0
+data          dgroup        data          PUB   0000E0FC  0000014C
+@AFMTIO       dgroup        data          PVT   0000E248  00000064
+@FCB          dgroup        data          PVT   0000E2AC  00000060
+@FMTIO        dgroup        data          PVT   0000E30C  000000DC
+@IOMISC       dgroup        data          PVT   0000E3E8  00000084
+@LFCTYPE      dgroup        data          PVT   0000E46C  00000164
+@MEMORY       dgroup        data          PVT   0000E5D0  00000068
+@LFGETENV     dgroup        data          PVT   0000E638  00000064
+??NO13        dgroup        data          COM   0000E69C  0000000A
+@ADIRECT      dgroup        data          PVT   0000E6A8  00000064
+@BREAK        dgroup        data          PVT   0000E70C  00000060
+bss           dgroup        bss           COM   0000E76C  00000000
+??BSS         dgroup        bss           PUB   0000E76C  00000000
+c_common      dgroup        bss           PUB   0000E770  00000000
+??stack       dgroup        stack         STK   0000F000  00004000
+stack         dgroup        stack         STK   00013000  00000000
+
+
+Public symbols
+
+     Name       Value      Module        Segment      Size
+------------  --------  ------------  ------------  --------
+$$GORUNB      00000001                              
+_EDATA        0000E770                c_common      
+_end          0000E770                c_common      
+_LF_387_FLAG  0000C62F  lfinit        ??data        
+_lf_387_used  0000D100  intel         ??INTEL       
+_lf_7_close   00006F54  minimum       MINIMUM       
+_lf_7_open    00002F10  dosio         code          
+_lf_7_read    000030B4  dosio         code          
+_lf_7_write   00003138  dosio         code          
+_LF_87CHOP    00002CE0  87util        code          
+_LF_87FLAGS   00002D50  87util        code          
+_LF_87INIT    00002D00  87util        code          
+_lf_87int     00002C90  87util        code          
+_LF_87ROUND   00002CC0  87util        code          
+_lf_87rstor   00002D20  87util        code          
+_LF_87SAVE    00002D10  87util        code          
+_LF_87TEST    00002D40  87util        code          
+_LF_87TESTP   00002D30  87util        code          
+_lf_87trunc   00002C70  87util        code          
+_lf___close   00003004  dosio         code          
+_lf__back1_-  0000A8F0  iomisc        IOMISC        
+_lf__create   00002FC4  dosio         code          
+_lf__drst     0000A9DC  iomisc        IOMISC        
+_lf__gpvc     0000A84C  iomisc        IOMISC        
+_lf__lseek    00003028  dosio         code          
+_lf__lsize    0000306C  dosio         code          
+_lf__prompt   0000E464  iomisc        @IOMISC       
+_lf__unlink   00003180  dosio         code          
+_lf_absolut-  00008EA4  ereport       EREPORT       
+_LF_ACTIVAT-  0000377C  inter         code          
+_lf_adj_con-  0000347B  ioconv        code          
+_lf_adj_sto-  0000364A  ioconv        code          
+_lf_alloc_b-  000070C0  minimum       MINIMUM       
+_lf_alocfcb   000093F8  fcb           FCB           
+_lf_altreta   00008FE4  ereport       EREPORT       
+_LF_ANCHOR    00002000  inter         ??lfanchor    
+_lf_argcnta   00008FBC  ereport       EREPORT       
+_lf_ascii_t-  00003550  ioconv        code          
+_LF_ATTACH_-  00003994  inter         code          
+_lf_b_open    00007334  open          OPEN          
+_LF_BRAKDFL   00000E78  inter         ??code        
+_LF_BRAKLBL   00000E2C  inter         ??code        
+_LF_BRAKLOG   00000E50  inter         ??code        
+_LF_BREAK     0000C020  lfinit        ??data        
+_lf_break_l-  00000E20  inter         ??code        
+_lf_brk       0000B834  break         BREAK         
+_LF_BSSEND    0000C018  lfinit        ??data        
+_LF_BSSSTART  0000C014  lfinit        ??data        
+_LF_BUFFER_-  0000D4F4  minimum       @MINIMUM      
+_LF_C_SHUTD-  000039E1  cstub_if      code          
+_LF_C_START-  000039E0  cstub_if      code          
+_lf_calloc    0000B330  memory        MEMORY        
+_lf_check_d-  00002F50  dosio         code          
+_lf_check_f-  000094E8  fcb           FCB           
+_lf_check_p-  00009E34  fmtio         FMTIO         
+_lf_cheqs     00002D60  cheqs         code          
+_lf_chopfil   000031CC  dosio         code          
+_lf_clenflag  0000A4D4  fmtio         FMTIO         
+_lf_cmp_name  0000A730  iomisc        IOMISC        
+_LF_CODEEND   0000C008  lfinit        ??data        
+_LF_CODESTA-  0000C004  lfinit        ??data        
+_LF_COMMAND-  0000C0C8  lfinit        ??data        
+_LF_COMMAND-  0000C0C4  lfinit        ??data        
+_lf_conflsh   00006E80  minimum       MINIMUM       
+_LF_CONTROL   0000C62A  lfinit        ??data        
+_LF_CONTROL-  0000C628  lfinit        ??data        
+_LF_CONTROL-  00003894  inter         code          
+_LF_CONTROL-  00003830  inter         code          
+_LF_CONTROL-  0000C624  lfinit        ??data        
+_lf_create_-  00002EA0  dosio         code          
+_lf_crrnt_c-  0000E383  fmtio         @FMTIO        
+_lf_ctype     0000E46C  lfctype       @LFCTYPE      
+_lf_curfcb    0000D500  minimum       @MINIMUM      
+_LF_DATAEND   0000C010  lfinit        ??data        
+_LF_DATASTA-  0000C00C  lfinit        ??data        
+_lf_dcode     00003E70  fmtin         FMTIN         
+_LF_DEACTIV-  000037DC  inter         code          
+_lf_delfcb    00006E18  minimum       MINIMUM       
+_lf_display   0000319C  dosio         code          
+_lf_doinc0a   0000905C  ereport       EREPORT       
+_LF_DPMI_FL-  0000C1DC  lfinit        ??data        
+_LF_EMERGEN-  000007F0  lfinit        ??code        
+_LF_EMIT_ER-  00000668  lfinit        ??code        
+_LF_EMIT_ER-  0000069C  lfinit        ??code        
+_lf_end_inp-  00009E70  fmtio         FMTIO         
+_lf_end_out-  00009F68  fmtio         FMTIO         
+_lf_ensure_-  0000AD34  iomisc        IOMISC        
+_LF_ENV_LEN-  0000C1D4  lfinit        ??data        
+_LF_ENV_POI-  0000C1D8  lfinit        ??data        
+_lf_EOL_FF    000056A8  fmtin         FMTIN         
+_lf_err_fcb   0000D4F8  minimum       @MINIMUM      
+_lf_err_pos-  0000D4F0  minimum       @MINIMUM      
+_lf_error_s-  000090AC  ereport       EREPORT       
+_lf_excepti-  00008ED0  ereport       EREPORT       
+_LF_EXITDOS   00000744  lfinit        ??code        
+_lf_fcb_list  0000D4FC  minimum       @MINIMUM      
+_lf_flg2rt    000039E8  4TOTEX        literals      
+_lf_float_s-  0000325C  ioconv        code          
+_lf_flush     0000AE74  iomisc        IOMISC        
+_lf_fmt_ini-  000095D4  fmtio         FMTIO         
+_lf_fmt_lis-  00009640  fmtio         FMTIO         
+_lf_fmtflag   0000E370  fmtio         @FMTIO        
+_lf_fndname   000093B0  fcb           FCB           
+_lf_fndunit   00006DD8  minimum       MINIMUM       
+_lf_free      0000B480  memory        MEMORY        
+_lf_get_byte  000071C8  minimum       MINIMUM       
+_lf_get_cur-  00009474  fcb           FCB           
+_lf_get_fmt-  0000A3F0  fmtio         FMTIO         
+_lf_get_n_d   0000B540  adirect       ADIRECT       
+_lf_get_n_f-  000091C8  afmtio        AFMTIO        
+_lf_getenv    0000B4B4  lfgetenv      LFGETENV      
+_LF_GRAPH_S-  0000C0BC  lfinit        ??data        
+_LF_GRAPH_S-  0000C0BE  lfinit        ??data        
+_LF_GRAPH_S-  0000C0C0  lfinit        ??data        
+_LF_HEAPEND   0000C024  lfinit        ??data        
+_LF_HEAPSTA-  0000C01C  lfinit        ??data        
+_lf_inchr     00004358  fmtin         FMTIN         
+_lf_incmx16   000040D0  fmtin         FMTIN         
+_lf_incmx8    000040A4  fmtin         FMTIN         
+_lf_indnf     00003EC8  fmtin         FMTIN         
+_lf_inint1    00003FD0  fmtin         FMTIN         
+_lf_inint2    00003FF4  fmtin         FMTIN         
+_lf_inint4    00003F88  fmtin         FMTIN         
+_lf_inint8    00003FAC  fmtin         FMTIN         
+_lf_init      00000014  lfinit        ??code        
+_lf_init_de-  00005520  fmtin         FMTIN         
+_lf_init_fcb  0000947C  fcb           FCB           
+_lf_init_in-  000094FC  fmtio         FMTIO         
+_LF_INITIAL-  00000000  lfinit        ??code        
+_lf_inlog1    000042A8  fmtin         FMTIN         
+_lf_inlog4    00004284  fmtin         FMTIN         
+_lf_inrel4    00003F40  fmtin         FMTIN         
+_lf_inrel8    00003F64  fmtin         FMTIN         
+_lf_int8087   0000375D  ioconv        code          
+_lf_intzf     00003D00  fmtin         FMTIN         
+_lf_ioerr     00008EF8  ereport       EREPORT       
+_lf_iomessa-  00009108  ereport       EREPORT       
+_lf_iostat    0000D4EC  minimum       @MINIMUM      
+_lf_itemsize  0000A520  fmtio         FMTIO         
+_lf_literals  00003A08  4TOTEX        literals      
+_LF_LOCK_SP-  000007F8  lfinit        ??code        
+_lf_main      0000200C  4TOTEX        code          
+_lf_main_er-  000085EC  ereport       EREPORT       
+_LF_MALLOC    0000B30C  memory        MEMORY        
+_lf_margin_-  00006D3C  fmtot         FMTOT         
+_lf_max_pri-  0000E124  ioconv        data          
+_lf_maximum   0000E120  ioconv        data          
+_LF_MEMCHR    00002DC0  cstring       code          
+_lf_memcmp    00002DE8  cstring       code          
+_LF_MOVE_HE-  000006D4  lfinit        ??code        
+_LF_NBRAK     00000E68  inter         ??code        
+_lf_ncode     0000581C  fmtot         FMTOT         
+_LF_NDPTYPE   0000C631  lfinit        ??data        
+_lf_negdima   00009084  ereport       EREPORT       
+_lf_next_bu-  00007234  minimum       MINIMUM       
+_lf_next_wr-  000072EC  minimum       MINIMUM       
+_lf_nl_flag   0000E382  fmtio         @FMTIO        
+_lf_no_head   0000D728  open          @OPEN         
+_lf_notfuna   00008F94  ereport       EREPORT       
+_lf_notsuba   00008F6C  ereport       EREPORT       
+_lf_ntznumf   0000A4FC  fmtio         FMTIO         
+_lf_ntznumfw  0000A50C  fmtio         FMTIO         
+_lf_ontzf     000056BC  fmtot         FMTOT         
+_LF_OSMAJOR   0000C1DD  lfinit        ??data        
+_LF_OSMINOR   0000C1DE  lfinit        ??data        
+_lf_otchr     00005E20  fmtot         FMTOT         
+_lf_otcmx16   00005B94  fmtot         FMTOT         
+_lf_otcmx8    00005B40  fmtot         FMTOT         
+_lf_otdnf     0000585C  fmtot         FMTOT         
+_lf_otint1    00005988  fmtot         FMTOT         
+_lf_otint2    000059CC  fmtot         FMTOT         
+_lf_otint4    00005A10  fmtot         FMTOT         
+_lf_otint8    00005A54  fmtot         FMTOT         
+_lf_otlog1    00005D14  fmtot         FMTOT         
+_lf_otlog4    00005D40  fmtot         FMTOT         
+_lf_otrel4    000058F0  fmtot         FMTOT         
+_lf_otrel8    0000593C  fmtot         FMTOT         
+_lf_output_-  0000E36C  fmtio         @FMTIO        
+_LF_PACK_EX-  00003460  ioconv        code          
+_LF_PFILL     0000C630  lfinit        ??data        
+_LF_PHARLAP-  0000C1E8  lfinit        ??data        
+_LF_PROGRAM-  0000C1E0  lfinit        ??data        
+_lf_promp     000031B5  dosio         code          
+_LF_PROTECT-  000012D0  inter         ??code        
+_lf_put_byte  00007258  minimum       MINIMUM       
+_lf_put_fmt-  0000A0D4  fmtio         FMTIO         
+_lf_put_n_d   0000B628  adirect       ADIRECT       
+_lf_put_n_f-  000092E8  afmtio        AFMTIO        
+_lf_read_bu-  0000AC78  iomisc        IOMISC        
+_lf_realloc   0000B3A0  memory        MEMORY        
+_lf_refbnda   00009034  ereport       EREPORT       
+_lf_release-  000094A0  fcb           FCB           
+_LF_RELEASE-  00003950  inter         code          
+_lf_rep_cnt   0000D184  fmtin         @FMTIN        
+_lf_round     00003369  ioconv        code          
+_lf_round_i   0000338A  ioconv        code          
+_lf_rterror   00008F3C  ereport       EREPORT       
+_LF_RTFLAG    0000C618  lfinit        ??data        
+_LF_RTP_FLA-  0000C632  lfinit        ??data        
+_lf_sbrk      0000B748  break         BREAK         
+_lf_scan_di-  00005534  fmtin         FMTIN         
+_lf_set_ios-  0000AED4  iomisc        IOMISC        
+_lf_set_name  00007104  minimum       MINIMUM       
+_lf_set_rea-  0000A594  iomisc        IOMISC        
+_lf_set_rec-  0000A984  iomisc        IOMISC        
+_lf_set_wri-  0000A5F0  iomisc        IOMISC        
+_lf_spindri-  0000851C  open          OPEN          
+_LF_SPINDRI-  0000C0B8  lfinit        ??data        
+_lf_spindri-  00008408  open          OPEN          
+_lf_spindri-  00008564  open          OPEN          
+_LF_STACK_F-  000006C0  lfinit        ??code        
+_LF_STACKBO-  0000C030  lfinit        ??data        
+_LF_STACKLI-  0000C02C  lfinit        ??data        
+_LF_STACKTOP  0000C028  lfinit        ??data        
+_LF_STATUS    0000C62C  lfinit        ??data        
+_lf_stop      00006ED4  minimum       MINIMUM       
+_lf_strchr    00002E60  cstring       code          
+_lf_strcmpr   0000A774  iomisc        IOMISC        
+_lf_strcopy   0000A80C  iomisc        IOMISC        
+_lf_strcpy    00002E30  cstring       code          
+_lf_subbnda   0000900C  ereport       EREPORT       
+_lf_tag_fcb   00006E60  minimum       MINIMUM       
+_lf_truncate  0000A684  iomisc        IOMISC        
+_LF_UNDERFL-  0000C62E  lfinit        ??data        
+_lf_unit_ch-  0000A700  iomisc        IOMISC        
+_LF_UNKNOWN-  0000C633  lfinit        ??data        
+_LF_UNLOCK_-  00000854  lfinit        ??code        
+_lf_unwind_-  00008E18  ereport       EREPORT       
+_lf_v500b6u-  0000C034  lfinit        ??data        
+_lf_write_b-  00007048  minimum       MINIMUM       
+_LF_XXXXXX    0000C034  lfinit        ??data        
+_LF_XXXXXXXX  0000C034  lfinit        ??data        
+latex         0000200C  4TOTEX        code          

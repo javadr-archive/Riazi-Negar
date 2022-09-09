@@ -1,0 +1,106 @@
+% dviscr 1.4s  06-Nov-1993  05:19
+%
+% Input file: dvips.dvi
+%
+/b:*
+/d:-
+/e:*
+/k:0
+/n:65535
+/z-
+/cf:1
+/cp:1
+/cs:1
+/fi
+/fl:-1
+/fm:hplaser
+/fo-
+/fs:1
+/fd:2
+/ft:0.2
+/fu-
+/fz::0,:h,:1,:2,:3,:4,:5,:6,:7,:8,:9
+/l:1in
+/la:0px
+/t:1in
+/ta:0px
+/h:296mm
+/w:210mm
+/tr:0
+/r:300
+/rf:300
+/rg:0
+/pd:{,$DVIDRVINPUT:}@i
+/pf:$DVIDRVFONTS:pixel.lj\@Rrdpi\@f{.pk,.pxl}
+/pg:{,$DVIDRVGRAPH:}{@Rrdpi\,}@PBf{@Ef,.msp,.pcx,.bmp}
+/pj:{$TMP:,}dv@u.mfj
+/pl:$DVIDRVFONTS:lj_{0,h,1,2,3,4,5a,5b,sli,7}
+/pm:{$TEXTFM:,\emtex\tfm\}@f
+/pr:{,$PATH:}@f
+/ps:
+/pt:@d.dlg
+/pv:
+/pw:
+/v:2
+/u:in
+/xe+
+/xx+
+/hx:1in
+/hy:1in
+/o:4
+/oa:0
+/ocp:2 /ocr:1 /ocs:2
+/oi-
+/or-
+/os+
+/ou:pt
+/s:1
+/ci:1 /cx:0in /cy:0in
+/ci:1
+@
+
+' TeX output 1993.11.04:0331'
+Loading font cminch scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cminch])
+Loading font cmbx10 scaled 1440  (D:\TEXXET\FONTS\lj_2.fli [cmbx10])
+Loading font logo10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [logo10])
+Loading font cmbx10 scaled 1440  (D:\TEXXET\FONTS\lj_2.fli [cmbx10])
+Loading font cmbx10 scaled 1727  (D:\TEXXET\FONTS\lj_3.fli [cmbx10])
+Loading font cmbx10 scaled 2488  (D:\TEXXET\FONTS\lj_5a.fli [cmbx10])
+Loading font cmti10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmti10])
+Loading font cmsl10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmsl10])
+Loading font cmtt10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmtt10])
+Loading font cmbx10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmbx10])
+Loading font cmsy7 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmsy7])
+Loading font cmsy10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmsy10])
+Loading font cmmi10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmmi10])
+Loading font cmr8 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmr8])
+Loading font cmr10 scaled 1095  (D:\TEXXET\FONTS\lj_h.fli [cmr10])
+Loading page pointers... 50 input pages, 50 output pages.
+ [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
+
+Memory usage:
+Strings                          66       1024
+Page buffers                      3      30720
+Sorted page buffers               3      30720
+Sorted page index              3500      28000
+Position stack                    6        168
+Font table                       15       1260
+Font indices                     15        150
+Page list                        50       2500
+Characters                     1408      45056
+Raster data                     302      85469
+Virtual fonts                     0          0
+VF characters                     0          0
+VF macros                         0          0
+Graphics                          0          0
+Lines                             0          0
+Font library directories          0          0
+Band buffer                       0          0
+TOTAL                                   225067
+
+Number of deallocations:      0
+Temporary file size:          0
+EMS bytes used:               0
+XMS bytes used:               0
+External memory reads:        0
+External memory writes:       0
