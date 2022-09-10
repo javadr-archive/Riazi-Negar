@@ -10,7 +10,7 @@
 
 ## Sample Output
 
-![page1](./Pics/latexparsi1.png)
-![page2](./Pics/latexparsi2.png)
-![page3](./Pics/latexparsi3.png)
-![page4](./Pics/latexparsi4.png)
+![page1](./Pics/SampleOutput0.png)
+![page2](./Pics/SampleOutput1.png)
+![page3](./Pics/SampleOutput2.png)
+![page4](./Pics/SampleOutput3.png)
